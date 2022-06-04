@@ -1,5 +1,5 @@
 import React from 'react';
-import brokolik from './img/brokolik.png';
+import brokolik from '../img/brokolik.png';
 import { Link } from 'react-router-dom';
 const Intro = () => {
   return (
@@ -7,7 +7,7 @@ const Intro = () => {
       <button>
         <Link className="home" to="/">
           Home
-        </Link>{' '}
+        </Link>
         {/* místo textu HOME dám přímo ikonku */}
       </button>
       <p>
