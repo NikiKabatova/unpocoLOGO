@@ -7,11 +7,7 @@ const About = () => {
   return (
     <>
       <main className="about">
-        <button>
-          <Link className="home" to="/">
-            X
-          </Link>{' '}
-        </button>
+        <button>x</button>
         <div className="container">
           <div className="characters">
             <img className="brokolik" src={brokolik} />
