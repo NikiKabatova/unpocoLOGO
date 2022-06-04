@@ -5,6 +5,7 @@ import { Outlet, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Intro from './Intro';
+import Map from './Map';
 
 const App = () => (
   <div>
@@ -26,6 +27,9 @@ const App = () => (
       <Link className="intro" to="/intro">
         Intro
       </Link>
+      <Link className="map" to="/map">
+        Map
+      </Link>
     </nav>
 
     <Outlet />
@@ -39,6 +43,7 @@ createRoot(document.querySelector('#app')).render(
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="intro" element={<Intro />} />
+        <Route path="map" element={<Map />} />
         <Route
           path="*"
           element={

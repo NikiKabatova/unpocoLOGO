@@ -1,9 +1,11 @@
 import React from 'react';
+import map from './map.png';
+import './style.css';
 
 const Map = () => {
   return (
     <main>
-      <img></img>
+      <img className="map" src={map} />
     </main>
   );
 };
