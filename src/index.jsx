@@ -27,8 +27,8 @@ const App = () => (
       <Link className="intro" to="/intro">
         Intro
       </Link>
-      <Link className="map" to="/map">
-        Map
+      <Link className="maps" to="/maps">
+        Maps
       </Link>
     </nav>
 
@@ -43,7 +43,7 @@ createRoot(document.querySelector('#app')).render(
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="intro" element={<Intro />} />
-        <Route path="map" element={<Map />} />
+        <Route path="maps" element={<Map />} />
         <Route
           path="*"
           element={
