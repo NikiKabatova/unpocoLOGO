@@ -4,9 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Outlet, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
-import OurProject from './OurProject';
-import logo from './img/logo.svg';
-import styles from './style.css';
 
 const App = () => (
   <div>
@@ -23,9 +20,6 @@ const App = () => (
       <Link className="about" to="/about">
         About
       </Link>{' '}
-      <Link className="project" to="/ourproject">
-        Project
-      </Link>
     </nav>
 
     <Outlet />
@@ -37,7 +31,6 @@ createRoot(document.querySelector('#app')).render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="/" element={<Home />} />
-        <Route path="ourproject" element={<OurProject />} />
         <Route path="about" element={<About />} />
         <Route
           path="*"
