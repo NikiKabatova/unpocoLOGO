@@ -6,9 +6,8 @@ import './style.css';
 const Map = () => {
   return (
     <div className="map">
-      <div className="map__image" style={{ backgroundImage: `url(${map})` }}>
-        <img className="level1" src={level1} />
-      </div>
+      <img className="map__image" src={map} />
+      <img className="level1" src={level1} />
     </div>
   );
 };
