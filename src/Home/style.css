@@ -4,3 +4,42 @@
   font-family: 'League Spartan', sans-serif;
   font-size: 60px;
 }
+
+.logo {
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button1 {
+  background-color: #85b794;
+  color: white;
+  font-size: x-large;
+  border: none;
+  width: 180px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.button2 {
+  background-color: #33456f;
+  color: white;
+  font-size: x-large;
+  border: none;
+  width: 180px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+@media only screen and (min-width: 360px) {
+  .button1,
+  .button2 {
+    width: 200px;
+  }
+}

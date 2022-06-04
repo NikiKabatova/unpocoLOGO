@@ -7,21 +7,18 @@
 h1 {
   display: flex;
   text-align: center;
-}
-
-p {
-  display: flex;
-  text-align: center;
+  justify-content: center;
 }
 
 .characters {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  justify-content: space-around;
 }
 
 .characters img {
-  width: calc(30% - 10px);
+  height: 30vmin;
 }
 
 .brokolik {
