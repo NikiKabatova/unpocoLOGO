@@ -1,6 +1,8 @@
 import React from 'react';
 import brokolik from '../img/brokolik.png';
 import { Link } from 'react-router-dom';
+import './style.css';
+
 const Intro = () => {
   return (
     <main>
