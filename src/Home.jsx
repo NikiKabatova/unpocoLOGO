@@ -6,8 +6,8 @@ const Home = () => {
     <main>
       <div className="container">
         <img className="logo" src={logo} />
-        <button>Start</button>
-        <button>O hře</button>
+        <button className="button1">Start</button>
+        <button className="button2">O hře</button>
       </div>
     </main>
   );
