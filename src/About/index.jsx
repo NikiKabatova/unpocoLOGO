@@ -3,6 +3,7 @@ import brokolik from '../img/brokolik.png';
 import karotka from '../img/karotka.png';
 import cilik from '../img/cilik.png';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const About = () => {
   return (
