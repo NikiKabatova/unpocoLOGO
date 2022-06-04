@@ -1,10 +1,14 @@
 import React from 'react';
 import heart from './heart.png';
+import Button from '../Button';
+
 const Game1 = () => {
   return (
     <div>
       <div className="panel">
-        <button>home</button>
+        <Button image="home" target="/" />
+        <img className="lives" src={heart} />
+        <img className="lives" src={heart} />
         <img className="lives" src={heart} />
       </div>
     </div>

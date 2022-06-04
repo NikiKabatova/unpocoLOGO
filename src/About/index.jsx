@@ -2,18 +2,16 @@ import React from 'react';
 import brokolik from '../img/brokolik.png';
 import karotka from '../img/karotka.png';
 import cilik from '../img/cilik.png';
-import { Link } from 'react-router-dom';
+import Button from '../Button';
+
 import './style.css';
 
 const About = () => {
   return (
     <>
       <main className="about">
-        <button>
-          <Link className="home" to="/">
-            X
-          </Link>
-        </button>
+        <Button image="home" target="/" />
+
         <div className="container">
           <div className="characters">
             <img className="brokolik" src={brokolik} />
