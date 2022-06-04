@@ -46,6 +46,35 @@ const About = () => {
             milované ratolesti tím, že si s nimi hru zahrajete.
           </p>
         </div>
+
+        <div>
+          <h1>Výslovnost jednotlivých písmenek</h1>
+          <p>
+            Písmeno R - Při nácviku dávejte pozor na správné postavení mluvidel:
+            Ústa mají být mírně pootevřená a špička jazyka se dotýká za horními
+            řezáky, aby si dítě nepomáhalo dolní čelistí, pomůže opřít
+            ukazováček o dolní přední zuby, ústa tak zůstanou pootevřená a jazyk
+            lépe „poskočí“. Výborné je zpívání, společně zpívejte rychlé a
+            rytmické písničky beze slov – hlásky a jejich shluky – dadada,
+            dndndn, dyndyndyn… Začněte tím, že místo R budete vyslovovat hlásku
+            D. Pokud bude dítě D vyslovovat potichu, jemně a správně, postupně
+            bude vyslovovat zvuk, který je hlásce R podobný a nakonec se podaří
+            vlastní R.
+          </p>
+          <p>
+            Písmeno L - První nejdůležitější krok je, aby dítě otevřelo ústa a
+            opřelo jazyk za horní zuby. V této poloze zkoušíme vytvořit dlouhý
+            zvuk LLLLL a až potom plácnout jazýčkem dolů. Když se toto podaří,
+            ozve se hláska L.
+          </p>
+          <p>
+            Písmena D, T, N - Ústa jsou mírně pootevřená, jazyk se opírá o
+            přední spodní řezáky, zbytek jazyka se prohne tak, že se dotýká
+            tvrdého patra. Takto dítě vyslovuje slabiky DA, TA, NA, atd. – ozve
+            se však ĎA, ŤA, ŇA. Každému dítěti se daří vyslovit správně jako
+            první hláska jiná.
+          </p>
+        </div>
       </main>
     </>
   );

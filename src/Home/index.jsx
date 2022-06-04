@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../img/logo.svg';
 import './style.css';
 const Home = () => {
@@ -7,8 +8,12 @@ const Home = () => {
       <div className="container">
         <img className="logo" src={logo} />
         <p className="logo-title">un poco LOGO</p>
-        <button className="button1">Start</button>
-        <button className="button2">O hře</button>
+        <button className="button1">
+          <Link to="/intro">Start</Link>
+        </button>
+        <button className="button2">
+          <Link to="/about">O hře</Link>
+        </button>
       </div>
     </main>
   );
