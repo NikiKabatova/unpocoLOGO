@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Outlet, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
+import Intro from './Intro';
 
 const App = () => (
   <div>
@@ -20,6 +21,9 @@ const App = () => (
       <Link className="about" to="/about">
         About
       </Link>{' '}
+      <Link className="intro" to="/intro">
+        Intro
+      </Link>
     </nav>
 
     <Outlet />
@@ -32,6 +36,7 @@ createRoot(document.querySelector('#app')).render(
       <Route path="/" element={<App />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="intro" element={<Intro />} />
         <Route
           path="*"
           element={
