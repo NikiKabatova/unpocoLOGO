@@ -10,7 +10,7 @@ const Intro = () => {
         <Link className="home" to="/">
           Home
         </Link>
-        {/* místo textu HOME dám přímo ikonku */}
+        {/* místo textu HOME dám přímo ikonku jako img */}
       </button>
       <p>
         Ahoj, já jsem Brokolík, tvým úkolem bude mi pomoci zachránit princeznu

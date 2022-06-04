@@ -6,6 +6,8 @@ import Home from './Home';
 import About from './About';
 import Intro from './Intro';
 import Map from './Map';
+import Game1 from './Game1';
+
 import './style.css';
 
 const App = () => (
@@ -17,11 +19,9 @@ const App = () => (
         paddingBottom: '1rem',
       }}
     >
-      <button>
-        <Link className="home" to="/">
-          Home
-        </Link>
-      </button>
+      <Link className="home" to="/">
+        Home
+      </Link>
       <Link className="about" to="/about">
         About
       </Link>{' '}
@@ -30,6 +30,9 @@ const App = () => (
       </Link>
       <Link className="maps" to="/maps">
         Maps
+      </Link>
+      <Link className="game1" to="/game1">
+        Game1
       </Link>
     </nav>
 
@@ -45,6 +48,7 @@ createRoot(document.querySelector('#app')).render(
         <Route path="about" element={<About />} />
         <Route path="intro" element={<Intro />} />
         <Route path="maps" element={<Map />} />
+        <Route path="game1" element={<Game1 />} />
         <Route
           path="*"
           element={
