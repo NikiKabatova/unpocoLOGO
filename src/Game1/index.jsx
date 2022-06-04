@@ -1,17 +1,20 @@
 import React from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import heart from './heart.png';
 import Button from '../Button';
 
 const Game1 = () => {
   return (
-    <div>
+    <DndProvider backend={HTML5Backend}>
       <div className="panel">
         <Button image="home" target="/" />
         <img className="lives" src={heart} />
         <img className="lives" src={heart} />
         <img className="lives" src={heart} />
+        <Button image="home" target="/" />
       </div>
-    </div>
+    </DndProvider>
   );
 };
 
