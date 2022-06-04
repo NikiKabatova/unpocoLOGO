@@ -5,7 +5,7 @@ import './style.css';
 
 const Intro = () => {
   return (
-    <main>
+    <main className="intro">
       <button>
         <Link className="home" to="/">
           Home

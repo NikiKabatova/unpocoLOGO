@@ -34,6 +34,13 @@
   border-radius: 5px;
 }
 
+a {
+  color: #fff;
+}
+a:hover {
+  color: #00f;
+}
+
 @media only screen and (min-width: 360px) {
   .button1,
   .button2 {

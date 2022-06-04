@@ -1,4 +1,12 @@
+.intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 p {
   display: flex;
-  text-align: center;
+}
+
+.intro .button1 {
 }
