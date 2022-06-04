@@ -15,9 +15,11 @@ const App = () => (
         paddingBottom: '1rem',
       }}
     >
-      <Link className="home" to="/">
-        Home
-      </Link>{' '}
+      <button>
+        <Link className="home" to="/">
+          Home
+        </Link>
+      </button>
       <Link className="about" to="/about">
         About
       </Link>{' '}

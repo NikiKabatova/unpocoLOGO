@@ -1,11 +1,19 @@
 import React from 'react';
+import brokolik from './img/brokolik.png';
+import karotka from './img/karotka.png';
+import cilik from './img/cilik.png';
 
 const About = () => {
   return (
     <>
       <main className="about">
+        <button>X</button>
         <div className="container">
-          <button>X</button>
+          <div className="characters">
+            <img className="brokolik" src={brokolik} />
+            <img className="karotka" src={karotka} />
+            <img className="cilik" src={cilik} />
+          </div>
           <h1>Info o hře</h1>
           <p>
             Ahoj rodičové, rád bych Vám pověděl pár slov o logopedii a proč je

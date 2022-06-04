@@ -1,9 +1,15 @@
 import React from 'react';
 import brokolik from './img/brokolik.png';
+import { Link } from 'react-router-dom';
 const Intro = () => {
   return (
     <main>
-      <button>Home</button>
+      <button>
+        <Link className="home" to="/">
+          Home
+        </Link>{' '}
+        {/* místo textu HOME dám přímo ikonku */}
+      </button>
       <p>
         Ahoj, já jsem Brokolík, tvým úkolem bude mi pomoci zachránit princeznu
         Karotku ze spárů zlouna Čilíka. Postupně budeme procházet jednotlivá
