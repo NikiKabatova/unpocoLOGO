@@ -5,6 +5,7 @@ const About = () => {
     <>
       <main className="about">
         <div className="container">
+          <button>X</button>
           <h1>Info o hře</h1>
           <p>
             Ahoj rodičové, rád bych Vám pověděl pár slov o logopedii a proč je
@@ -16,7 +17,7 @@ const About = () => {
           <p>
             Preventivní logopedickou péči v podobě rozvoje je vhodné aplikovat
             už od útlého věku dítěte. Velmi důležitá je komunikace v rodině.
-            Jakou roli má mluvené slovo, jak moc se využívá – to vše ovlivňuje
+            Jakou roli má mluvené slovo, jak moc se využívá a to vše ovlivňuje
             dítě. Hra je nejvhodnější forma pro učení dětí předškolního věku.
             Součástí této hry budete i vy, aby jste dětem pomohli správně
             rozvíjet řečové schopnosti.
