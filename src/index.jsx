@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Intro from './Intro';
 import Map from './Map';
+import './style.css';
 
 const App = () => (
   <div>
