@@ -2,18 +2,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-p {
-  display: flex;
+  margin: 0 auto;
+  width: 600px;
 }
 
 .intro .button1 {
   margin: 10px;
 }
 
+p {
+  padding-top: 30px;
+}
 .intro .brokolik {
-  width: 30%;
+  width: 60%;
+  float: right;
+  margin-top: -30px;
+  margin-left: 50px;
 }
 
 .intro__button {

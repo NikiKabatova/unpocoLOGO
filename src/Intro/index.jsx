@@ -10,6 +10,7 @@ const Intro = () => {
       <Button className="intro__button" image="home" target="/" />
 
       <p>
+        <img className="brokolik" src={brokolik} />
         Ahoj, já jsem Brokolík, tvým úkolem bude mi pomoci zachránit princeznu
         Karotku ze spárů zlouna Čilíka. Postupně budeme procházet jednotlivá
         stanoviště a plnit úkoly, s úkoly ti pomohou rodiče. Pokud se ti podaří
@@ -17,7 +18,7 @@ const Intro = () => {
         díky kterým můžeš úkol opakovat. K osvobození princezny je musíš splnit
         všechny. Tak vzhůru do boje.
       </p>
-      <img className="brokolik" src={brokolik} />
+
       <button className="button1">
         <Link to="/game1">Start</Link>
       </button>
