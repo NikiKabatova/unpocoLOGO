@@ -1,19 +1,19 @@
 import React from 'react';
 import map from './img/map.png';
-import level1 from './img/level1.png';
-import level2 from './img/level2.png';
-import level3 from './img/level3.png';
-import cave from './img/cave.png';
-import waterfall from './img/waterfall.png';
-import vulcano from './img/vulcano.png';
+import caveGray from './img/caveGray.png';
+import waterfallGray from './img/waterfallGray.png';
+import vulcanoGray from './img/vulcanoGray.png';
+import caveColor from './img/caveColor.png';
+import waterfallColor from './img/waterfallColor.png';
+import vulcanoColor from './img/vulcanoColor.png';
 
 import './style.css';
 
 const Map = ({ unlockedLevels }) => {
   console.log(unlockedLevels);
-  level1 = unlockedLevels[1] ? level1 : cave;
-  level2 = unlockedLevels[1] ? level2 : waterfall;
-  level3 = unlockedLevels[1] ? level3 : vulcano;
+  const level1 = unlockedLevels[1] ? caveColor : caveGray;
+  const level2 = unlockedLevels[2] ? waterfallColor : waterfallGray;
+  const level3 = unlockedLevels[3] ? vulcanoColor : vulcanoGray;
   return (
     <div className="map">
       <img className="map__image" src={map} />
