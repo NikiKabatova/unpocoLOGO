@@ -2,6 +2,7 @@ import React from 'react';
 import Pictures from './Pictures';
 import { useState } from 'react';
 import { useDrop } from 'react-dnd';
+import boxImg from '../krabice.png';
 
 const PictureList = [
   {
@@ -14,15 +15,15 @@ const PictureList = [
   },
   {
     id: 3,
-    image: require('./game_img/kytara.png'),
+    image: require('./game_img/rocket.png'),
   },
   {
     id: 4,
-    image: require('./game_img/kytara.png'),
+    image: require('./game_img/unicorn.png'),
   },
   {
     id: 5,
-    image: require('./game_img/kytara.png'),
+    image: require('./game_img/car.png'),
   },
 ];
 
@@ -44,19 +45,11 @@ const DragDrop = () => {
   };
   return (
     <>
+      <div className="box" ref={drop}>
+        <img className="box" src={boxImg} />
+      </div>
       <div className="pictures">
         {PictureList.map((pictures) => {
-          return (
-            <Pictures
-              image={pictures.image}
-              id={pictures.id}
-              key={pictures.id}
-            />
-          );
-        })}
-      </div>
-      <div className="box" ref={drop}>
-        {box.map((pictures) => {
           return (
             <Pictures
               image={pictures.image}
