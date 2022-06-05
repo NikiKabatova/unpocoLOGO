@@ -37,33 +37,43 @@ const Game1 = () => {
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedItem, setSelectedItem] = useState();
 
+  const removeImg = (id) => {
+    if (!forbiddenItems.includes(id)) {
+      setPictures((pictures) =>
+        pictures.filter((picture) => id !== picture.id),
+      );
+    }
+  };
+
   const handleBoxClick = () => {
     console.log(selectedItem);
     if (!selectedItem) return;
     if (forbiddenItems.includes(selectedItem)) {
     } else {
-      setPictures((pictures) =>
-        pictures.filter((picture) => selectedItem !== picture.id),
-      );
+      removeImg(selectedItem);
     }
   };
   return (
-    <DndProvider backend={HTML5Backend}>
-      <div className="panel">
+    <main>
+      <nav className="navigation">
         <Button image="home" target="/" />
         <img className="lives" src={heart} />
         <img className="lives" src={heart} />
         <img className="lives" src={heart} />
         <Button image="home" target="/" />
+      </nav>
+      <div>
+        <DndProvider backend={HTML5Backend}>
+          <DragDrop
+            pictures={pictures}
+            removeImg={removeImg}
+            selectedItem={selectedItem}
+            setSelectedItem={setSelectedItem}
+            handleBoxClick={handleBoxClick}
+          />
+        </DndProvider>
       </div>
-      <DragDrop
-        pictures={pictures}
-        setPictures={setPictures}
-        selectedItem={selectedItem}
-        setSelectedItem={setSelectedItem}
-        handleBoxClick={handleBoxClick}
-      />
-    </DndProvider>
+    </main>
   );
 };
 

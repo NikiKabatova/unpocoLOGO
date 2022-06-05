@@ -5,7 +5,7 @@ import boxImg from '../img/krabice.png';
 
 const DragDrop = ({
   pictures,
-  setPictures,
+  removeImg,
   selectedItem,
   setSelectedItem,
   handleBoxClick,
@@ -17,9 +17,7 @@ const DragDrop = ({
       isOver: !!monitor.isOver(),
     }),
   }));
-  const removeImg = (id) => {
-    setPictures((pictures) => pictures.filter((picture) => id !== picture.id));
-  };
+
   return (
     <>
       <div onClick={handleBoxClick} className="box" ref={drop}>
@@ -33,6 +31,7 @@ const DragDrop = ({
               image={picture.image}
               id={picture.id}
               key={picture.id}
+              selectedItem={selectedItem}
             />
           );
         })}
