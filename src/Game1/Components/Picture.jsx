@@ -9,7 +9,7 @@ const Picture = ({ id, image, onClick }) => {
       isDragging: !!monitor.isDragging(),
     }),
   }));
-  console.log(image);
+
   return (
     <img
       onClick={onClick}

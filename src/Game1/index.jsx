@@ -4,8 +4,40 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import heart from './heart.png';
 import Button from '../Button';
 import DragDrop from './Components/DragDrop';
+import { useState } from 'react';
+import './style.css';
+
+const initialPictures = [
+  {
+    id: 1,
+    image: require('./img/kytara.png'),
+  },
+  {
+    id: 2,
+    image: require('./img/medved.png'),
+  },
+  {
+    id: 3,
+    image: require('./img/rocket.png'),
+  },
+  {
+    id: 4,
+    image: require('./img/unicorn.png'),
+  },
+  {
+    id: 5,
+    image: require('./img/car.png'),
+  },
+];
+
+const forbiddenItems = [2, 5];
 
 const Game1 = () => {
+  const [pictures, setPictures] = useState(initialPictures);
+  const [selectedItem, setSelectedItem] = useState();
+  const handleBoxClick = () => {
+    console.log(selectedItem);
+  };
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="panel">
@@ -15,7 +47,13 @@ const Game1 = () => {
         <img className="lives" src={heart} />
         <Button image="home" target="/" />
       </div>
-      <DragDrop />
+      <DragDrop
+        pictures={pictures}
+        setPictures={setPictures}
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+        handleBoxClick={handleBoxClick}
+      />
     </DndProvider>
   );
 };

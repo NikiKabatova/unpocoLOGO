@@ -1,0 +1,7 @@
+.box {
+  display: inline-block;
+}
+
+.box__img {
+  width: 190px;
+}
