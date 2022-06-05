@@ -5,7 +5,9 @@ import level2 from './img/level2.png';
 import level3 from './img/level3.png';
 import './style.css';
 
-const Map = () => {
+const Map = ({ unlockedLevels }) => {
+  console.log(unlockedLevels);
+  level1 = unlockedLevels[1] ? 'levelGray' : 'levelColor';
   return (
     <div className="map">
       <img className="map__image" src={map} />

@@ -7,10 +7,10 @@ import About from './About';
 import Intro from './Intro';
 import Map from './Map';
 import Game1 from './Game1';
-
+import useLocalStorage from './hooks/useLocalStorage';
 import './style.css';
 
-const App = () => (
+const Wrapper = () => (
   <div>
     <nav
       className="navigation"
@@ -40,24 +40,35 @@ const App = () => (
   </div>
 );
 
-createRoot(document.querySelector('#app')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="intro" element={<Intro />} />
-        <Route path="maps" element={<Map />} />
-        <Route path="game1" element={<Game1 />} />
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>Tady nic není!</p>
-            </main>
-          }
-        />
-      </Route>
-    </Routes>
-  </BrowserRouter>,
-);
+const App = () => {
+  const [unlockedLevels, setUnlockedLevels] = useLocalStorage(
+    'unlockedLevels',
+    { 1: true, 2: false, 3: false },
+  );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Wrapper />}>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="intro" element={<Intro />} />
+          <Route
+            path="maps"
+            element={<Map unlockedLevels={unlockedLevels} />}
+          />
+          <Route path="game1" element={<Game1 />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>Tady nic není!</p>
+              </main>
+            }
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+createRoot(document.querySelector('#app')).render(<App />);
