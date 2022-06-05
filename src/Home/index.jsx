@@ -9,10 +9,10 @@ const Home = () => {
         <img className="logo" src={logo} />
         <p className="logo-title">un poco LOGO</p>
         <button className="button1">
-          <Link to="/intro">Start</Link>
+          <Link to="/intro">START</Link>
         </button>
         <button className="button2">
-          <Link to="/about">O hře</Link>
+          <Link to="/about">O HŘE</Link>
         </button>
       </div>
     </main>

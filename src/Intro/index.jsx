@@ -20,7 +20,7 @@ const Intro = () => {
       </p>
 
       <button className="button1">
-        <Link to="/game1">Start</Link>
+        <Link to="/game1">START</Link>
       </button>
     </main>
   );

@@ -23,3 +23,8 @@ p {
 .intro__button {
   margin-right: auto;
 }
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
