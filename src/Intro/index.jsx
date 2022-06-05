@@ -2,16 +2,13 @@ import React from 'react';
 import brokolik from '../img/brokolik.png';
 import { Link } from 'react-router-dom';
 import './style.css';
+import Button from '../Button';
 
 const Intro = () => {
   return (
     <main className="intro">
-      <button>
-        <Link className="home" to="/">
-          Home
-        </Link>
-        {/* místo textu HOME dám přímo ikonku jako img */}
-      </button>
+      <Button className="intro__button" image="home" target="/" />
+
       <p>
         Ahoj, já jsem Brokolík, tvým úkolem bude mi pomoci zachránit princeznu
         Karotku ze spárů zlouna Čilíka. Postupně budeme procházet jednotlivá
@@ -21,7 +18,9 @@ const Intro = () => {
         všechny. Tak vzhůru do boje.
       </p>
       <img className="brokolik" src={brokolik} />
-      <button className="button1">Start</button>
+      <button className="button1">
+        <Link to="/game1">Start</Link>
+      </button>
     </main>
   );
 };

@@ -9,4 +9,13 @@ p {
 }
 
 .intro .button1 {
+  margin: 10px;
+}
+
+.intro .brokolik {
+  width: 30%;
+}
+
+.intro__button {
+  margin-right: auto;
 }
