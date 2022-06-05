@@ -20,6 +20,8 @@ h1 {
   gap: 15px;
   justify-content: space-around;
   padding-bottom: 50px;
+  text-align: center;
+  font: bold 15px/1.5 Arial;
 }
 
 .characters img {

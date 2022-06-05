@@ -14,9 +14,20 @@ const About = () => {
 
         <div className="container">
           <div className="characters">
-            <img className="brokolik" src={brokolik} />
-            <img className="karotka" src={karotka} />
-            <img className="cilik" src={cilik} />
+            <div>
+              <img className="brokolik" src={brokolik} />
+              <p>Brokolík</p>
+            </div>
+
+            <div>
+              <img className="karotka" src={karotka} />
+              <p>Karotka</p>
+            </div>
+
+            <div>
+              <img className="cilik" src={cilik} />
+              <p>Čilík</p>
+            </div>
           </div>
           <h1>Info o hře</h1>
           <p>
