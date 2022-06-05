@@ -1,7 +1,7 @@
 .map {
   background-color: #0fc6d9;
   padding: 10px;
-  max-width: 400px;
+  max-width: 800px;
   position: relative;
 }
 
@@ -11,8 +11,22 @@
 
 .level1 {
   position: absolute;
-  left: 20%;
-  top: 20%;
+  left: 13%;
+  top: 13%;
+  width: 30%;
+}
+
+.level2 {
+  position: absolute;
+  left: 58%;
+  top: 32%;
+  width: 35%;
+}
+
+.level3 {
+  position: absolute;
+  left: 30%;
+  top: 57%;
   width: 30%;
 }
 
