@@ -15,12 +15,12 @@ const Map = ({ unlockedLevels }) => {
   const level2 = unlockedLevels[2] ? waterfallColor : waterfallGray;
   const level3 = unlockedLevels[3] ? vulcanoColor : vulcanoGray;
   return (
-    <div className="map">
+    <main className="map">
       <img className="map__image" src={map} />
       <img className="level1" src={level1} />
       <img className="level2" src={level2} />
       <img className="level3" src={level3} />
-    </div>
+    </main>
   );
 };
 

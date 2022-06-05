@@ -10,7 +10,7 @@ const DragDrop = ({
   setSelectedItem,
   handleBoxClick,
 }) => {
-  const [{ isOver }, drop] = useDrop(() => ({
+  const [_, drop] = useDrop(() => ({
     accept: 'image',
     drop: (item) => removeImg(item.id),
     collect: (monitor) => ({

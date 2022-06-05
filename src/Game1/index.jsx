@@ -31,12 +31,21 @@ const initialPictures = [
 ];
 
 const forbiddenItems = [2, 5];
+console.log(forbiddenItems.includes(3));
 
 const Game1 = () => {
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedItem, setSelectedItem] = useState();
+
   const handleBoxClick = () => {
     console.log(selectedItem);
+    if (!selectedItem) return;
+    if (forbiddenItems.includes(selectedItem)) {
+    } else {
+      setPictures((pictures) =>
+        pictures.filter((picture) => selectedItem !== picture.id),
+      );
+    }
   };
   return (
     <DndProvider backend={HTML5Backend}>
