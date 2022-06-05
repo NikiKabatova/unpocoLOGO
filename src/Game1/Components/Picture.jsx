@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 
-const Pictures = ({ id, image }) => {
+const Picture = ({ id, image, onClick }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: 'image',
     item: { id: id },
@@ -12,6 +12,7 @@ const Pictures = ({ id, image }) => {
   console.log(image);
   return (
     <img
+      onClick={onClick}
       ref={drag}
       src={image}
       width="150px"
@@ -20,4 +21,4 @@ const Pictures = ({ id, image }) => {
   );
 };
 
-export default Pictures;
+export default Picture;
