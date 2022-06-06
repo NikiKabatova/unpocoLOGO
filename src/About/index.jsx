@@ -3,7 +3,6 @@ import brokolik from '../img/brokolik.png';
 import karotka from '../img/karotka.png';
 import cilik from '../img/cilik.png';
 import Button from '../Button';
-
 import './style.css';
 
 const About = () => {
@@ -90,3 +89,9 @@ const About = () => {
 };
 
 export default About;
+
+//  <Button className="home__button" target="/" />
+
+//<button className="button1">
+//           <Link to="/home">NEXT</Link>
+//        </button>

@@ -15,6 +15,7 @@
 }
 
 .button1 {
+  display: block;
   background-color: #85b794;
   color: white;
   font-size: x-large;
@@ -23,9 +24,12 @@
   height: 50px;
   border-radius: 5px;
   margin: 10px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.088);
+  cursor: pointer;
 }
 
 .button2 {
+  display: block;
   background-color: #33456f;
   color: white;
   font-size: x-large;
@@ -33,13 +37,12 @@
   width: 180px;
   height: 50px;
   border-radius: 5px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.088);
+  cursor: pointer;
 }
 
 a {
-  color: black;
-}
-a:hover {
-  color: #00f;
+  color: white;
 }
 
 @media only screen and (min-width: 360px) {
@@ -47,4 +50,7 @@ a:hover {
   .button2 {
     width: 200px;
   }
+}
+
+a:active {
 }
