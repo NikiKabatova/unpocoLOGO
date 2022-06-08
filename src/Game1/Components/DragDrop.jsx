@@ -1,13 +1,14 @@
 import React from 'react';
 import Picture from './Picture';
 import { useDrop } from 'react-dnd';
-import boxImg from '../img/krabice.png';
+import boxImg from '../img/box.png';
+import Sound from '../../Sound';
 
 const DragDrop = ({
   pictures,
   removeImg,
-  selectedItem,
-  setSelectedItem,
+  selectedPicture,
+  setSelectedPicture,
   handleBoxClick,
 }) => {
   const [_, drop] = useDrop(() => ({
@@ -27,11 +28,11 @@ const DragDrop = ({
         {pictures.map((picture) => {
           return (
             <Picture
-              onClick={() => setSelectedItem(picture.id)}
+              onClick={() => setSelectedPicture(picture.id)}
               image={picture.image}
               id={picture.id}
               key={picture.id}
-              selectedItem={selectedItem}
+              selectedPicture={selectedPicture}
             />
           );
         })}

@@ -7,7 +7,9 @@ import About from './About';
 import Intro from './Intro';
 import Map from './Map';
 import Game1 from './Game1';
+import GameRulesInfo from './GameRulesInfo';
 import useLocalStorage from './hooks/useLocalStorage';
+
 import './style.css';
 
 const Wrapper = () => (
@@ -34,6 +36,7 @@ const Wrapper = () => (
       <Link className="game1" to="/game1">
         Game1
       </Link>
+      <Link to="/rules-info">rules-info</Link>
     </nav>
 
     <Outlet />
@@ -57,6 +60,7 @@ const App = () => {
             element={<Map unlockedLevels={unlockedLevels} />}
           />
           <Route path="game1" element={<Game1 />} />
+          <Route path="rules-info" element={<GameRulesInfo />} />
           <Route
             path="*"
             element={

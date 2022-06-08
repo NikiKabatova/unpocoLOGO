@@ -4,17 +4,19 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import heart from './heart.png';
 import Button from '../Button';
 import DragDrop from './Components/DragDrop';
+import GameRulesInfo from '../GameRulesInfo';
 import { useState } from 'react';
 import './style.css';
+import Sound from '../Sound';
 
 const initialPictures = [
   {
     id: 1,
-    image: require('./img/kytara.png'),
+    image: require('./img/princess.png'),
   },
   {
     id: 2,
-    image: require('./img/medved.png'),
+    image: require('./img/bear.png'),
   },
   {
     id: 3,
@@ -30,15 +32,16 @@ const initialPictures = [
   },
 ];
 
-const forbiddenItems = [2, 5];
-console.log(forbiddenItems.includes(3));
+const forbiddenPictures = [2, 5];
+console.log(forbiddenPictures.includes(3));
 
 const Game1 = () => {
   const [pictures, setPictures] = useState(initialPictures);
-  const [selectedItem, setSelectedItem] = useState();
+  const [selectedPicture, setSelectedPicture] = useState();
+  const [isInfoVisible, setIsInfoVisible] = useState(true);
 
   const removeImg = (id) => {
-    if (!forbiddenItems.includes(id)) {
+    if (!forbiddenPictures.includes(id)) {
       setPictures((pictures) =>
         pictures.filter((picture) => id !== picture.id),
       );
@@ -46,15 +49,20 @@ const Game1 = () => {
   };
 
   const handleBoxClick = () => {
-    console.log(selectedItem);
-    if (!selectedItem) return;
-    if (forbiddenItems.includes(selectedItem)) {
+    console.log(selectedPicture);
+    if (!selectedPicture) return;
+    if (forbiddenPictures.includes(selectedPicture)) {
     } else {
-      removeImg(selectedItem);
+      removeImg(selectedPicture);
     }
   };
+
   return (
     <main>
+      {isInfoVisible && (
+        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={0} />
+      )}
+
       <nav className="navigation">
         <Button image="home" target="/" />
         <img className="lives" src={heart} />
@@ -62,13 +70,14 @@ const Game1 = () => {
         <img className="lives" src={heart} />
         <Button image="home" target="/" />
       </nav>
+      <Sound />
       <div>
         <DndProvider backend={HTML5Backend}>
           <DragDrop
             pictures={pictures}
             removeImg={removeImg}
-            selectedItem={selectedItem}
-            setSelectedItem={setSelectedItem}
+            selectedPicture={selectedPicture}
+            setSelectedPicture={setSelectedPicture}
             handleBoxClick={handleBoxClick}
           />
         </DndProvider>

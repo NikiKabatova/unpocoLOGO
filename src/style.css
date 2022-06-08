@@ -15,4 +15,5 @@ main {
   background-color: #fbf8f8;
   border-radius: 10px;
   padding: 30px;
+  position: relative;
 }
