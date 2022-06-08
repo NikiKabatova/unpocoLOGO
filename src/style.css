@@ -14,6 +14,28 @@ main {
   margin: 0 auto;
   background-color: #fbf8f8;
   border-radius: 10px;
-  padding: 30px;
+  padding: 0;
   position: relative;
+}
+
+.button__icon {
+  background-color: ;
+  border: none;
+  width: auto;
+}
+
+.info__button,
+.home__button {
+  background-color: #139eb1;
+}
+
+.back__button {
+  background-color: #33456f;
+}
+
+.home__button,
+.info__button,
+.back__button {
+  border-radius: 50%;
+  border: none;
 }

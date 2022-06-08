@@ -39,16 +39,6 @@ h1 {
   display: flex;
 }
 
-.button__icon,
-button {
-  background-color: #139eb1;
-  color: white;
-  border: none;
-  height: 45px;
-  border-radius: 50px;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.088);
-}
-
 .button1:hover {
   background-color: #1cbb96;
 }

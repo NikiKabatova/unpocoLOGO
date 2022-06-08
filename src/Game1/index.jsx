@@ -1,7 +1,6 @@
 import React from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import heart from './heart.png';
 import Button from '../Button';
 import DragDrop from './Components/DragDrop';
 import GameRulesInfo from '../GameRulesInfo';
@@ -71,14 +70,11 @@ const Game1 = () => {
       {isVictory && <VictoryPopup />}
 
       <nav className="navigation">
-        <Button image="home" target="/" />
-        <img className="lives" src={heart} />
-        <img className="lives" src={heart} />
-        <img className="lives" src={heart} />
-        <Button image="home" target="/" />
+        <Button image="arrow" target="/map" className="back__button" />
+        <Button image="home" target="/" className="home__button" />
       </nav>
       <Sound />
-      <div>
+      <div className="content">
         <DndProvider backend={HTML5Backend}>
           <DragDrop
             pictures={pictures}

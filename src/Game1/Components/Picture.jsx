@@ -12,7 +12,7 @@ const Picture = ({ id, image, onClick, selectedPicture }) => {
 
   return (
     <img
-      className="image"
+      className="game1__image"
       onClick={onClick}
       ref={drag}
       src={image}

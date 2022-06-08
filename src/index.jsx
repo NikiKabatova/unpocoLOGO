@@ -30,7 +30,7 @@ const Wrapper = () => (
       <Link className="intro" to="/intro">
         Intro
       </Link>
-      <Link className="maps" to="/maps">
+      <Link className="maps" to="/map">
         Maps
       </Link>
       <Link className="game1" to="/game1">
@@ -55,10 +55,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="intro" element={<Intro />} />
-          <Route
-            path="maps"
-            element={<Map unlockedLevels={unlockedLevels} />}
-          />
+          <Route path="map" element={<Map unlockedLevels={unlockedLevels} />} />
           <Route path="game1" element={<Game1 />} />
           <Route path="rules-info" element={<GameRulesInfo />} />
           <Route

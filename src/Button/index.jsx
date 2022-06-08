@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import homeIcon from './img/home.png';
+import arrowIcon from './img/arrow.png';
 
 const ICON = {
   home: homeIcon,
+  // info: infoIcon,
+  arrow: arrowIcon,
 };
 const Button = ({ image, target, className }) => {
   return (
