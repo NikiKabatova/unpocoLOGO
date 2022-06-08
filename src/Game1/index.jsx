@@ -8,6 +8,7 @@ import GameRulesInfo from '../GameRulesInfo';
 import { useState } from 'react';
 import './style.css';
 import Sound from '../Sound';
+import VictoryPopup from '../VictoryPopup';
 
 const initialPictures = [
   {
@@ -39,12 +40,17 @@ const Game1 = () => {
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
   const [isInfoVisible, setIsInfoVisible] = useState(true);
+  const [isVictory, setIsVictory] = useState(false);
 
   const removeImg = (id) => {
     if (!forbiddenPictures.includes(id)) {
-      setPictures((pictures) =>
-        pictures.filter((picture) => id !== picture.id),
-      );
+      setPictures((pictures) => {
+        if (pictures.length === 3) {
+          setIsVictory(true);
+        }
+        console.log(pictures);
+        return pictures.filter((picture) => id !== picture.id);
+      });
     }
   };
 
@@ -62,6 +68,7 @@ const Game1 = () => {
       {isInfoVisible && (
         <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={0} />
       )}
+      {isVictory && <VictoryPopup />}
 
       <nav className="navigation">
         <Button image="home" target="/" />
