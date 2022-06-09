@@ -44,7 +44,7 @@
 a {
   color: white;
 }
-
+/* tyto media jsou od min šířky 360px až po širokoúhlé monitory (tedy pro vše) */
 @media only screen and (min-width: 360px) {
   .button1,
   .button2 {

@@ -54,6 +54,7 @@ const Game2 = () => {
         <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={0} />
       )}
       {isVictory && <VictoryPopup />}
+
       <nav className="navigation">
         <Button image="arrow" target="/map" className="back__button" />
         <Button image="home" target="/" className="home__button" />

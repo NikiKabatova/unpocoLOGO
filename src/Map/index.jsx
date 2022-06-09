@@ -21,8 +21,12 @@ const Map = ({ unlockedLevels }) => {
       <Link to="/game1">
         <img className="level1" src={level1} />
       </Link>
-      <img className="level2" src={level2} />
-      <img className="level3" src={level3} />
+      <Link to="/game2">
+        <img className="level2" src={level2} />
+      </Link>
+      <Link to="/game3">
+        <img className="level3" src={level3} />
+      </Link>
     </main>
   );
 };
