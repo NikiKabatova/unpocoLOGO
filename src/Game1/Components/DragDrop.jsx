@@ -28,11 +28,11 @@ const DragDrop = ({
         {pictures.map((picture) => {
           return (
             <Picture
-              onClick={() => setSelectedPicture(picture.id)}
-              image={picture.image}
               id={picture.id}
               key={picture.id}
+              image={picture.image}
               selectedPicture={selectedPicture}
+              onClick={() => setSelectedPicture(picture.id)}
             />
           );
         })}

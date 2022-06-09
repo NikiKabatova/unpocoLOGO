@@ -7,6 +7,8 @@ import About from './About';
 import Intro from './Intro';
 import Map from './Map';
 import Game1 from './Game1';
+import Game2 from './Game2';
+import Game3 from './Game3';
 import GameRulesInfo from './GameRulesInfo';
 import useLocalStorage from './hooks/useLocalStorage';
 
@@ -36,6 +38,12 @@ const Wrapper = () => (
       <Link className="game1" to="/game1">
         Game1
       </Link>
+      <Link className="game2" to="/game2">
+        Game2
+      </Link>
+      <Link className="game3" to="/game3">
+        Game3
+      </Link>
       <Link to="/rules-info">rules-info</Link>
     </nav>
 
@@ -57,6 +65,8 @@ const App = () => {
           <Route path="intro" element={<Intro />} />
           <Route path="map" element={<Map unlockedLevels={unlockedLevels} />} />
           <Route path="game1" element={<Game1 />} />
+          <Route path="game2" element={<Game2 />} />
+          <Route path="game3" element={<Game3 />} />
           <Route path="rules-info" element={<GameRulesInfo />} />
           <Route
             path="*"

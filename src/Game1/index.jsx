@@ -37,7 +37,7 @@ console.log(forbiddenPictures.includes(3));
 
 const Game1 = () => {
   const text = ['picture1', 'picture2', 'picture3'];
-  const currentPicture = text[currentPicture]; // nevím kam to přidat a jetli to můžu takhle nazývat
+  const currentPicture = text[currentPicture]; // TODO: nevím kam to přidat a jetli to můžu takhle nazývat
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
   const [isInfoVisible, setIsInfoVisible] = useState(true);
@@ -56,7 +56,6 @@ const Game1 = () => {
   };
 
   const handleBoxClick = () => {
-    console.log(selectedPicture);
     if (!selectedPicture) return;
     if (forbiddenPictures.includes(selectedPicture)) {
     } else {
