@@ -4,32 +4,45 @@ import Button from '../Button';
 import Sound from '../Sound';
 import GameRulesInfo from '../GameRulesInfo';
 import VictoryPopup from '../VictoryPopup';
+
 import './style.css';
 
 const pictureGallery = [
   {
     id: 1,
     image: require('./img/lion.png'),
+    text: 'text1',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 2,
-    image: require('./img/lion.png'),
+    image: require('./img/saw.png'),
+    text: 'text2',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 3,
-    image: require('./img/lion.png'),
+    image: require('./img/dummy.png'),
+    text: 'text3',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 4,
-    image: require('./img/lion.png'),
+    image: require('./img/butterfly.png'),
+    text: 'text4',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 5,
-    image: require('./img/lion.png'),
+    image: require('./img/apple.png'),
+    text: 'text5',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 6,
-    image: require('./img/lion.png'),
+    image: require('./img/dolphin.png'),
+    text: 'text6',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
 ];
 
@@ -38,6 +51,14 @@ const Game2 = () => {
   const [donePictures, setDonePictures] = useState([]);
   const [isInfoVisible, setIsInfoVisible] = useState(true);
   const [isVictory, setIsVictory] = useState(false);
+
+  const currentText = pictureGallery.find(
+    (picture) => currentPicture === picture.id,
+  ).text;
+
+  const currentSound = pictureGallery.find(
+    (picture) => currentPicture === picture.id,
+  ).sound;
 
   const handlePictureClick = (id) => {
     if (currentPicture === id) {
@@ -59,25 +80,23 @@ const Game2 = () => {
         <Button image="arrow" target="/map" className="back__button" />
         <Button image="home" target="/" className="home__button" />
       </nav>
-      <Sound />
+
       <div className="content">
         {pictureGallery.map((picture) => {
-          console.log(picture, donePictures, donePictures.includes(picture.id));
           const isDone = donePictures.includes(picture.id);
           return (
             <img
-              onClick={() => handlePictureClick(picture.id)}
-              className={
-                isDone
-                  ? 'game2__picture game2__picture--done'
-                  : 'game2__picture'
-              }
               key={picture.id}
               src={picture.image}
+              onClick={() => handlePictureClick(picture.id)}
+              className={
+                isDone ? 'game__picture game__picture--done' : 'game__picture'
+              }
             />
           );
         })}
       </div>
+      <Sound text={currentText} sound={currentSound} />
     </main>
   );
 };

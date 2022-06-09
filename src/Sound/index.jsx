@@ -1,10 +1,9 @@
 import React from 'react';
-import doorbell from './doorbell-sound-effect.mp3';
 import speaker from './speaker.png';
 import './style.css';
 
-const Sound = () => {
-  const audio = new Audio(doorbell);
+const Sound = ({ text, sound }) => {
+  const audio = new Audio(sound);
   return (
     <div>
       <button
@@ -14,8 +13,7 @@ const Sound = () => {
         }}
       >
         <img className="button__icon" src={speaker} />
-        Jednorožec{' '}
-        {/* TODO: vložit ten currentPicture + vložit icon repráku! */}
+        {text}
       </button>
     </div>
   );

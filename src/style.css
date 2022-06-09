@@ -39,3 +39,6 @@ main {
   border-radius: 50%;
   border: none;
 }
+.game__picture--done {
+  opacity: 0.5;
+}

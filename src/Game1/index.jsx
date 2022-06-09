@@ -35,7 +35,7 @@ const initialPictures = [
 const forbiddenPictures = [2, 5];
 console.log(forbiddenPictures.includes(3));
 
-const Game1 = () => {
+const Game1 = ({ setUnlockedLevels }) => {
   const text = ['picture1', 'picture2', 'picture3'];
   const currentPicture = text[currentPicture]; // TODO: nevím kam to přidat a jetli to můžu takhle nazývat
   const [pictures, setPictures] = useState(initialPictures);
@@ -48,6 +48,7 @@ const Game1 = () => {
       setPictures((pictures) => {
         if (pictures.length === 3) {
           setIsVictory(true);
+          setUnlockedLevels({ 1: true, 2: true, 3: false });
         }
         console.log(pictures);
         return pictures.filter((picture) => id !== picture.id);
