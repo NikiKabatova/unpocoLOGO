@@ -12,7 +12,8 @@ const Sound = () => {
           audio.play();
         }}
       >
-        Jednorožec
+        Jednorožec{' '}
+        {/* tady potřebuji vložit ten currentPicture - text a vložit icon repráku! */}
       </button>
     </div>
   );
