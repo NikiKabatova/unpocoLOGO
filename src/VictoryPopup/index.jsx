@@ -13,11 +13,11 @@ const VictoryPopup = () => {
         <h1>Huráá</h1>
         <p>Teď už jenom zbývá aby ti rodiče potvrdili úspěšně zdolaný level!</p>
         <Link to="/">
-          <button>Začít</button>
+          <button>Home</button>
         </Link>
-        <button onClick={refreshPage}>Začít</button>
-        <Link to="/maps">
-          <button>Začít</button>
+        <button onClick={refreshPage}>Reload</button>
+        <Link to="/map">
+          <button>OK</button>
         </Link>
       </div>
     </div>
