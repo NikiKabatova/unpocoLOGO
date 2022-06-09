@@ -1,0 +1,9 @@
+.audio__button {
+  border-radius: 30px;
+  border: none;
+  background-color: #33456f;
+  color: white;
+  padding: 5px;
+  width: 50%;
+  text-transform: uppercase;
+}

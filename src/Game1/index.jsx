@@ -28,7 +28,7 @@ const initialPictures = [
   },
   {
     id: 5,
-    image: require('./img/car.png'),
+    image: require('./img/ball.png'),
   },
 ];
 
