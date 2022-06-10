@@ -6,38 +6,47 @@ import VictoryPopup from '../VictoryPopup';
 import { useState } from 'react';
 import './style.css';
 
-const rhymePictures = [
+const initialPictures = [
   {
     id: 1,
     image: require('./img/strawberry.png'),
     text: `To byla nehoda!
-    \n
-    Spadla mi _ _ _ _ _ _!`,
+Spadla mi _ _ _ _ _ _!`,
+    sound: require('./audio/jahoda.mp3'),
   },
   {
     id: 2,
     image: require('./img/panda.png'),
     text: `Ptá se Tondy Vanda,
 jak vypadá _ _ _ _ _ .`,
+    sound: require('./audio/panda.mp3'),
   },
   {
     id: 3,
     image: require('./img/snake.png'),
-    text: 'Padá voda, padá, máme doma _ _ _ _.',
+    text: `Padá voda, padá,
+máme doma _ _ _ _.`,
+    sound: require('./audio/had.mp3'),
   },
   {
     id: 4,
     image: require('./img/trumpet.png'),
-    text: 'Troubil Toník na _ _ _ _ _ _, vyplašil pár holoubků.',
+    text: `Troubil Toník na _ _ _ _ _ _,
+vyplašil pár holoubků.`,
+    sound: require('./audio/trubka.mp3'),
   },
 ];
 
 const Game3 = () => {
-  const [currentPicture, setCurrentPicture] = useState(rhymePictures[1].id);
+  const [currentPicture, setCurrentPicture] = useState(initialPictures[1].id);
 
-  const currentText = rhymePictures.find(
+  const currentText = initialPictures.find(
     (picture) => currentPicture === picture.id,
   ).text;
+
+  const currentSound = initialPictures.find(
+    (picture) => currentPicture === picture.id,
+  ).sound;
 
   const [donePictures, setDonePictures] = useState([]);
   const [isInfoVisible, setIsInfoVisible] = useState(true);
@@ -51,7 +60,6 @@ const Game3 = () => {
       if (id === 4) setCurrentPicture(1);
       if (id === 1) setIsVictory(true);
     }
-    console.log(id, donePictures, currentPicture);
   };
   return (
     <main>
@@ -72,7 +80,7 @@ const Game3 = () => {
       <div className="game3-content">
         <p className="rhyme__text">{currentText}</p>
         <div className="content__images">
-          {rhymePictures.map((picture) => {
+          {initialPictures.map((picture) => {
             const isDone = donePictures.includes(picture.id);
             return (
               <img
@@ -86,7 +94,7 @@ const Game3 = () => {
             );
           })}
         </div>
-        <Sound />
+        <Sound text={currentText} sound={currentSound} />
       </div>
     </main>
   );
