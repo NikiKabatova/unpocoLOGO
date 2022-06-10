@@ -16,7 +16,7 @@ const initialPictures = [
   },
   {
     id: 2,
-    image: require('./img/bear.png'),
+    image: require('./img/robot.png'),
   },
   {
     id: 3,
@@ -31,13 +31,13 @@ const initialPictures = [
     image: require('./img/ball.png'),
   },
 ];
-
+//TODO: Změnit/vymazat ty forbidden pictures, protože nakonec žádné takové nebudou ne? Jsme se bavili že uklidí teda všechny ty hračky
 const forbiddenPictures = [2, 5];
 console.log(forbiddenPictures.includes(3));
 
 const Game1 = ({ setUnlockedLevels }) => {
   const text = ['picture1', 'picture2', 'picture3'];
-  const currentPicture = text[currentPicture]; // TODO: nevím kam to přidat a jetli to můžu takhle nazývat
+  const currentPicture = text[currentPicture];
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
   const [isInfoVisible, setIsInfoVisible] = useState(true);

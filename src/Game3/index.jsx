@@ -10,22 +10,22 @@ const rhymesPictures = [
   {
     id: 1,
     image: require('./img/strawberry.png'),
-    text: 'text1',
+    text: 'To byla nehoda!Spadla mi _ _ _ _ _ _!', //TODO: přidat wrap? nebo br?
   },
   {
     id: 2,
     image: require('./img/panda.png'),
-    text: 'text2',
+    text: 'Ptá se Tondy Vanda, jak vypadá _ _ _ _ _ .',
   },
   {
     id: 3,
-    image: require('./img/dog.png'),
-    text: 'text3',
+    image: require('./img/snake.png'),
+    text: 'Padá voda, padá, máme doma _ _ _ _.',
   },
   {
     id: 4,
     image: require('./img/trumpet.png'),
-    text: 'text4',
+    text: 'Troubil Toník na _ _ _ _ _ _, vyplašil pár holoubků.',
   },
 ];
 

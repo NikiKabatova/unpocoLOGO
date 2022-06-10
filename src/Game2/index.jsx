@@ -11,37 +11,37 @@ const pictureGallery = [
   {
     id: 1,
     image: require('./img/lion.png'),
-    text: 'text1',
+    text: 'Lev spí',
     sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 2,
     image: require('./img/saw.png'),
-    text: 'text2',
+    text: 'Pila řeže',
     sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 3,
     image: require('./img/dummy.png'),
-    text: 'text3',
+    text: 'Dětský dudlík',
     sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 4,
     image: require('./img/butterfly.png'),
-    text: 'text4',
+    text: 'Motýl lítá',
     sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 5,
     image: require('./img/apple.png'),
-    text: 'text5',
+    text: 'Červené jablko',
     sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 6,
     image: require('./img/dolphin.png'),
-    text: 'text6',
+    text: 'Delfín skáče',
     sound: require('./doorbell-sound-effect.mp3'),
   },
 ];
@@ -67,7 +67,6 @@ const Game2 = () => {
       if (id === 6) setCurrentPicture(2);
       if (id === 2) setIsVictory(true);
     }
-    console.log(id, donePictures, currentPicture);
   };
   return (
     <main>
