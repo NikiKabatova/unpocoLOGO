@@ -15,25 +15,25 @@ const initialPictures = [
     id: 1,
     image: require('./img/princess.png'),
     text: 'Princezna',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/princezna.mp3'),
   },
   {
     id: 2,
     image: require('./img/robot.png'),
     text: 'Robot',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/robot.mp3'),
   },
   {
     id: 3,
     image: require('./img/rocket.png'),
     text: 'Raketa',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/raketa.mp3'),
   },
   {
     id: 4,
     image: require('./img/unicorn.png'),
     text: 'Jednorožec',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/jednorozec.mp3'),
   },
 ];
 
