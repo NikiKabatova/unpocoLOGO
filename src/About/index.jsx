@@ -84,7 +84,7 @@ const About = () => {
             </p>
           </section>
           <button className="button1">
-            <Link to="/map">START</Link>
+            <Link to="/map">Start</Link>
           </button>
         </div>
       </main>

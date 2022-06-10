@@ -9,10 +9,13 @@ const Home = () => {
         <img className="logo" src={logo} />
         <p className="logo-title">un poco LOGO</p>
         <button className="button1">
-          <Link to="/intro">START</Link>
+          <Link to="/map">Start</Link>
         </button>
         <button className="button2">
-          <Link to="/about">O HŘE</Link>
+          <Link to="/intro">Pravidla</Link>
+        </button>
+        <button className="button3">
+          <Link to="/about">O logopedii</Link>
         </button>
       </div>
     </main>
