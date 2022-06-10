@@ -11,38 +11,38 @@ const initialPictures = [
   {
     id: 1,
     image: require('./img/lion.png'),
-    text: 'Lev spí',
-    sound: require('./doorbell-sound-effect.mp3'),
+    text: 'Lev leží',
+    sound: require('./audio/lev.mp3'),
   },
   {
     id: 2,
     image: require('./img/saw.png'),
     text: 'Pila řeže',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/pila.mp3'),
   },
   {
     id: 3,
     image: require('./img/dummy.png'),
     text: 'Dětský dudlík',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/pila.mp3'),
   },
   {
     id: 4,
     image: require('./img/butterfly.png'),
     text: 'Motýl lítá',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/motyl.mp3'),
   },
   {
     id: 5,
     image: require('./img/apple.png'),
     text: 'Červené jablko',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/motyl.mp3'),
   },
   {
     id: 6,
     image: require('./img/dolphin.png'),
     text: 'Delfín skáče',
-    sound: require('./doorbell-sound-effect.mp3'),
+    sound: require('./audio/delfin.mp3'),
   },
 ];
 
