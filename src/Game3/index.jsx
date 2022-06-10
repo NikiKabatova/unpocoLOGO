@@ -6,7 +6,7 @@ import VictoryPopup from '../VictoryPopup';
 import { useState } from 'react';
 import './style.css';
 
-const rhymesPictures = [
+const rhymePictures = [
   {
     id: 1,
     image: require('./img/strawberry.png'),
@@ -30,9 +30,9 @@ const rhymesPictures = [
 ];
 
 const Game3 = () => {
-  const [currentPicture, setCurrentPicture] = useState(rhymesPictures[1].id);
+  const [currentPicture, setCurrentPicture] = useState(rhymePictures[1].id);
 
-  const currentText = rhymesPictures.find(
+  const currentText = rhymePictures.find(
     (picture) => currentPicture === picture.id,
   ).text;
 
@@ -61,23 +61,25 @@ const Game3 = () => {
         <Button image="home" target="/" className="home__button" />
       </nav>
 
-      <div className="content">
-        <p>{currentText}</p>
-        {rhymesPictures.map((picture) => {
-          const isDone = donePictures.includes(picture.id);
-          return (
-            <img
-              key={picture.id}
-              src={picture.image}
-              className={
-                isDone ? 'game__picture game__picture--done' : 'game__picture'
-              }
-              onClick={() => handleCLick(picture.id)}
-            />
-          );
-        })}
+      <div className="game3-content">
+        <p className="rhyme__text">{currentText}</p>
+        <div className="content__images">
+          {rhymePictures.map((picture) => {
+            const isDone = donePictures.includes(picture.id);
+            return (
+              <img
+                key={picture.id}
+                src={picture.image}
+                className={
+                  isDone ? 'game__picture game__picture--done' : 'game__picture'
+                }
+                onClick={() => handleCLick(picture.id)}
+              />
+            );
+          })}
+        </div>
+        <Sound />
       </div>
-      <Sound />
     </main>
   );
 };

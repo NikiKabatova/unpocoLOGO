@@ -12,7 +12,7 @@ const Home = () => {
           <Link to="/map">Start</Link>
         </button>
         <button className="button2">
-          <Link to="/intro">Pravidla</Link>
+          <Link to="/rules">Pravidla</Link>
         </button>
         <button className="button3">
           <Link to="/about">O logopedii</Link>

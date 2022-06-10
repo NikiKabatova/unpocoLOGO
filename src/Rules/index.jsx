@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import Button from '../Button';
 
-const Intro = () => {
+const Rules = () => {
   return (
-    <main className="intro">
-      <Button className="intro__button" image="home" target="/" />
+    <main className="game-rules">
+      <Button image="home" target="/" className="home__button" />
 
       <p>
         <img className="brokolik" src={brokolik} />
@@ -20,10 +20,10 @@ const Intro = () => {
       </p>
 
       <button className="button1">
-        <Link to="/map">START</Link>
+        <Link to="/map">Start</Link>
       </button>
     </main>
   );
 };
 
-export default Intro;
+export default Rules;

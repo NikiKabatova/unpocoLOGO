@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Outlet, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
-import Intro from './Intro';
+import Rules from './Rules';
 import Map from './Map';
 import Game1 from './Game1';
 import Game2 from './Game2';
@@ -28,8 +28,8 @@ const Wrapper = () => (
       <Link className="about" to="/about">
         About
       </Link>{' '}
-      <Link className="intro" to="/intro">
-        Intro
+      <Link className="rules" to="/rules">
+        Rules
       </Link>
       <Link className="maps" to="/map">
         Maps
@@ -43,7 +43,6 @@ const Wrapper = () => (
       <Link className="game3" to="/game3">
         Game3
       </Link>
-      <Link to="/rules-info">rules-info</Link>
     </nav>
 
     <Outlet />
@@ -61,7 +60,7 @@ const App = () => {
         <Route path="/" element={<Wrapper />}>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="intro" element={<Intro />} />
+          <Route path="rules" element={<Rules />} />
           <Route path="map" element={<Map unlockedLevels={unlockedLevels} />} />
           <Route
             path="game1"

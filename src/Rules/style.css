@@ -1,4 +1,4 @@
-.intro {
+.game-rules {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -6,18 +6,18 @@
   width: 600px;
 }
 
-.intro .button1 {
+.game-rules .button1 {
   margin: 10px;
 }
 
-.intro .brokolik {
+.game-rules .brokolik {
   width: 60%;
   float: right;
   margin-top: -30px;
   margin-left: 50px;
 }
 
-.intro__button {
+.game-rules__button {
   margin-right: auto;
 }
 

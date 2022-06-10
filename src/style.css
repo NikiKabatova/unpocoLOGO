@@ -45,9 +45,8 @@ main {
 .back__button {
   border-radius: 50%;
   border: none;
-}
-.game__picture--done {
-  opacity: 0.5;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
 }
 
 .button1,
@@ -61,7 +60,7 @@ main {
   cursor: pointer;
   font-family: 'League Spartan', sans-serif;
   text-transform: uppercase;
-  padding: 15px 0 15px 0;
+  padding: 15px 0;
 }
 
 .button1 a,

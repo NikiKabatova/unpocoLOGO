@@ -1,0 +1,13 @@
+.rhyme__text {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.5rem;
+  padding: 60px;
+  text-align: center;
+}
+
+.content__images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}

@@ -80,19 +80,21 @@ const Game2 = () => {
       </nav>
 
       <div className="game2-content">
-        {pictureGallery.map((picture) => {
-          const isDone = donePictures.includes(picture.id);
-          return (
-            <img
-              key={picture.id}
-              src={picture.image}
-              onClick={() => handlePictureClick(picture.id)}
-              className={
-                isDone ? 'game__picture game__picture--done' : 'game__picture'
-              }
-            />
-          );
-        })}
+        <div className="content__images">
+          {pictureGallery.map((picture) => {
+            const isDone = donePictures.includes(picture.id);
+            return (
+              <img
+                key={picture.id}
+                src={picture.image}
+                onClick={() => handlePictureClick(picture.id)}
+                className={
+                  isDone ? 'game__picture game__picture--done' : 'game__picture'
+                }
+              />
+            );
+          })}
+        </div>
       </div>
       <Sound text={currentText} sound={currentSound} />
     </main>
