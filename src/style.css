@@ -16,6 +16,7 @@ main {
   border-radius: 10px;
   padding: 0;
   position: relative;
+  min-height: 650px;
 }
 
 .button__icon {
