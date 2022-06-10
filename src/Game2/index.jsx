@@ -4,6 +4,7 @@ import Button from '../Button';
 import Sound from '../Sound';
 import GameRulesInfo from '../GameRulesInfo';
 import VictoryPopup from '../VictoryPopup';
+
 import './style.css';
 
 const initialPictures = [
@@ -45,7 +46,7 @@ const initialPictures = [
   },
 ];
 
-const Game2 = () => {
+const Game2 = ({ setUnlockedLevels }) => {
   const [currentPicture, setCurrentPicture] = useState(initialPictures[0].id);
   const [donePictures, setDonePictures] = useState([]);
   const [isInfoVisible, setIsInfoVisible] = useState(true);
@@ -64,19 +65,27 @@ const Game2 = () => {
       setDonePictures((pictures) => [...pictures, id]);
       if (id === 1) setCurrentPicture(6);
       if (id === 6) setCurrentPicture(2);
-      if (id === 2) setIsVictory(true);
+      if (id === 2) {
+        setIsVictory(true);
+        setUnlockedLevels({ 1: true, 2: true, 3: true });
+      }
     }
   };
   return (
     <main>
       {isInfoVisible && (
-        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={0} />
+        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={1} />
       )}
       {isVictory && <VictoryPopup />}
 
       <nav className="navigation-game">
         <Button image="arrow" target="/map" className="back__button" />
-        <Button image="home" target="/" className="home__button" />
+        <Button
+          onClick={() => setIsInfoVisible(true)}
+          image="home"
+          target="/"
+          className="home__button"
+        />
       </nav>
 
       <div className="game2-content">
