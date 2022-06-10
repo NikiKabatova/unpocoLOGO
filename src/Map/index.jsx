@@ -17,20 +17,22 @@ const Map = ({ unlockedLevels }) => {
   const level2 = unlockedLevels[2] ? waterfallColor : waterfallGray;
   const level3 = unlockedLevels[3] ? vulcanoColor : vulcanoGray;
   return (
-    <main className="map">
+    <main className="test">
       <nav className="navigation">
         <Button image="home" target="/" className="home__button" />
       </nav>
-      <img className="map__image" src={map} />
-      <Link to="/game1">
-        <img className="level1" src={level1} />
-      </Link>
-      <Link to="/game2">
-        <img className="level2" src={level2} />
-      </Link>
-      <Link to="/game3">
-        <img className="level3" src={level3} />
-      </Link>
+      <div className="map">
+        <img className="map__image" src={map} />
+        <Link to="/game1">
+          <img className="level1" src={level1} />
+        </Link>
+        <Link to="/game2">
+          <img className="level2" src={level2} />
+        </Link>
+        <Link to="/game3">
+          <img className="level3" src={level3} />
+        </Link>
+      </div>
     </main>
   );
 };
