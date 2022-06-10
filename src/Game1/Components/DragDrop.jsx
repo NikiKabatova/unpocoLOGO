@@ -21,19 +21,18 @@ const DragDrop = ({
 
   return (
     <>
-      <div className="pictures">
-        {pictures.map((picture) => {
-          return (
-            <Picture
-              id={picture.id}
-              key={picture.id}
-              image={picture.image}
-              selectedPicture={selectedPicture}
-              onClick={() => setSelectedPicture(picture.id)}
-            />
-          );
-        })}
-      </div>
+      {pictures.map((picture) => {
+        return (
+          <Picture
+            id={picture.id}
+            key={picture.id}
+            image={picture.image}
+            selectedPicture={selectedPicture}
+            onClick={() => setSelectedPicture(picture.id)}
+          />
+        );
+      })}
+
       <div onClick={handleBoxClick} className="box" ref={drop}>
         <img className="box__img" src={boxImg} />
       </div>

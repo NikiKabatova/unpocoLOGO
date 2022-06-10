@@ -8,6 +8,7 @@ import GameRulesInfo from '../GameRulesInfo';
 import Sound from '../Sound';
 import VictoryPopup from '../VictoryPopup';
 import './style.css';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const initialPictures = [
   {
@@ -40,7 +41,7 @@ const Game1 = ({ setUnlockedLevels }) => {
   const [currentPicture, setCurrentPicture] = useState(initialPictures[1].id);
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
-  const [isInfoVisible, setIsInfoVisible] = useState(true);
+  const [isInfoVisible, setIsInfoVisible] = useLocalStorage('Game1Info', true);
   const [isVictory, setIsVictory] = useState(false);
 
   const currentText = initialPictures.find(
@@ -80,7 +81,12 @@ const Game1 = ({ setUnlockedLevels }) => {
 
       <nav className="navigation-game">
         <Button image="arrow" target="/map" className="back__button" />
-        <Button image="home" target="/" className="home__button" />
+        <Button
+          onClick={() => setIsInfoVisible(true)}
+          image="home"
+          target="/"
+          className="home__button"
+        />
       </nav>
 
       <div className="game1-content">
