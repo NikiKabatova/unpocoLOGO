@@ -1,42 +1,25 @@
-/*.container {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}*/
-
-h1 {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+.container {
+  padding: 20px;
 }
-
 .characters {
   display: flex;
-  flex-direction: row;
   width: 100%;
   gap: 15px;
   justify-content: space-around;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   text-align: center;
-  font: bold 15px/1.5 Arial;
 }
 
 .characters img {
   height: 30vmin;
 }
-
-.brokolik {
-  display: flex;
+.about__title {
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  padding-bottom: 10px;
 }
-
-.karotka {
-  display: flex;
-}
-
-.cilik {
-  display: flex;
+.about p {
+  line-height: 1.2;
 }
 
 .button1:hover {

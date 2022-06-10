@@ -4,7 +4,6 @@ import Button from '../Button';
 import Sound from '../Sound';
 import GameRulesInfo from '../GameRulesInfo';
 import VictoryPopup from '../VictoryPopup';
-
 import './style.css';
 
 const pictureGallery = [

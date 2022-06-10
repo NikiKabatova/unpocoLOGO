@@ -1,7 +1,6 @@
 import React from 'react';
 import brokolik from '../img/brokolik.png';
 import './style.css';
-// ve hře 1 použiju <GameRulesInfo currentGame={0}/> toto pouziju do rodice hra 1, 2, 3 />
 
 const GameRulesInfo = ({ currentGame, hide }) => {
   const text = [

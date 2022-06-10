@@ -10,7 +10,7 @@ const rhymesPictures = [
   {
     id: 1,
     image: require('./img/strawberry.png'),
-    text: 'To byla nehoda!Spadla mi _ _ _ _ _ _!', //TODO: přidat wrap? nebo br?
+    text: 'To byla nehoda!Spadla mi _ _ _ _ _ _!', //TODO: přidat wrap? nebo br? Prostě nevím jak to udělat na 2 řádky, a také nevím jak tomu dát třídu
   },
   {
     id: 2,

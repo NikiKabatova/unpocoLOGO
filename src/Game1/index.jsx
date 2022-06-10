@@ -1,38 +1,42 @@
 import React from 'react';
+import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import Button from '../Button';
 import DragDrop from './Components/DragDrop';
 import GameRulesInfo from '../GameRulesInfo';
-import { useState } from 'react';
-import './style.css';
 import Sound from '../Sound';
 import VictoryPopup from '../VictoryPopup';
+import './style.css';
 
 const initialPictures = [
   {
     id: 1,
     image: require('./img/princess.png'),
+    text: 'Princezna',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 2,
     image: require('./img/robot.png'),
+    text: 'Robot',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 3,
     image: require('./img/rocket.png'),
+    text: 'Rocket',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 4,
     image: require('./img/unicorn.png'),
-  },
-  {
-    id: 5,
-    image: require('./img/ball.png'),
+    text: 'Unicorn',
+    sound: require('./doorbell-sound-effect.mp3'),
   },
 ];
 //TODO: Změnit/vymazat ty forbidden pictures, protože nakonec žádné takové nebudou ne? Jsme se bavili že uklidí teda všechny ty hračky
-const forbiddenPictures = [2, 5];
+const forbiddenPictures = [2];
 console.log(forbiddenPictures.includes(3));
 
 const Game1 = ({ setUnlockedLevels }) => {
