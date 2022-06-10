@@ -10,7 +10,9 @@ const About = () => {
   return (
     <>
       <main>
-        <Button image="home" target="/" className="home__button" />
+        <nav className="navigation">
+          <Button image="home" target="/" className="home__button" />
+        </nav>
 
         <div className="container">
           <div className="characters">

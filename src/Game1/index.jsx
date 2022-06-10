@@ -75,7 +75,7 @@ const Game1 = ({ setUnlockedLevels }) => {
       )}
       {isVictory && <VictoryPopup />}
 
-      <nav className="navigation">
+      <nav className="navigation-game">
         <Button image="arrow" target="/map" className="back__button" />
         <Button image="home" target="/" className="home__button" />
       </nav>

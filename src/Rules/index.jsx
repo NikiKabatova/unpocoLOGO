@@ -7,7 +7,9 @@ import Button from '../Button';
 const Rules = () => {
   return (
     <main className="game-rules">
-      <Button image="home" target="/" className="home__button" />
+      <nav className="navigation">
+        <Button image="home" target="/" className="home__button" />
+      </nav>
 
       <p>
         <img className="brokolik" src={brokolik} />

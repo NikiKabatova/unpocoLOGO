@@ -6,6 +6,7 @@ import vulcanoGray from './img/vulcanoGray.png';
 import caveColor from './img/caveColor.png';
 import waterfallColor from './img/waterfallColor.png';
 import vulcanoColor from './img/vulcanoColor.png';
+import Button from '../Button';
 import { Link } from 'react-router-dom';
 
 import './style.css';
@@ -17,6 +18,9 @@ const Map = ({ unlockedLevels }) => {
   const level3 = unlockedLevels[3] ? vulcanoColor : vulcanoGray;
   return (
     <main className="map">
+      <nav className="navigation">
+        <Button image="home" target="/" className="home__button" />
+      </nav>
       <img className="map__image" src={map} />
       <Link to="/game1">
         <img className="level1" src={level1} />

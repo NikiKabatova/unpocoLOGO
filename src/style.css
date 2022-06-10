@@ -9,6 +9,11 @@ html {
   background-color: #c8eaed;
 }
 .navigation {
+  border-radius: 10px 10px 0 0;
+  padding: 22px;
+}
+
+.navigation-game {
   background-color: #eaeaea;
   border-radius: 10px 10px 0 0;
   padding: 22px;
