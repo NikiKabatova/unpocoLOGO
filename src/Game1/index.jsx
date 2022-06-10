@@ -25,47 +25,50 @@ const initialPictures = [
   {
     id: 3,
     image: require('./img/rocket.png'),
-    text: 'Rocket',
+    text: 'Raketa',
     sound: require('./doorbell-sound-effect.mp3'),
   },
   {
     id: 4,
     image: require('./img/unicorn.png'),
-    text: 'Unicorn',
+    text: 'Jednorožec',
     sound: require('./doorbell-sound-effect.mp3'),
   },
 ];
-//TODO: Změnit/vymazat ty forbidden pictures, protože nakonec žádné takové nebudou ne? Jsme se bavili že uklidí teda všechny ty hračky
-const forbiddenPictures = [2];
-console.log(forbiddenPictures.includes(3));
 
 const Game1 = ({ setUnlockedLevels }) => {
-  const text = ['picture1', 'picture2', 'picture3'];
-  const currentPicture = text[currentPicture];
+  const [currentPicture, setCurrentPicture] = useState(initialPictures[1].id);
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
   const [isInfoVisible, setIsInfoVisible] = useState(true);
   const [isVictory, setIsVictory] = useState(false);
 
-  const removeImg = (id) => {
-    if (!forbiddenPictures.includes(id)) {
-      setPictures((pictures) => {
-        if (pictures.length === 3) {
-          setIsVictory(true);
-          setUnlockedLevels({ 1: true, 2: true, 3: false });
-        }
-        console.log(pictures);
-        return pictures.filter((picture) => id !== picture.id);
-      });
+  const currentText = initialPictures.find(
+    (picture) => currentPicture === picture.id,
+  ).text;
+
+  const currentSound = initialPictures.find(
+    (picture) => currentPicture === picture.id,
+  ).sound;
+
+  const removePicture = (id) => {
+    if (currentPicture === id) {
+      setPictures((pictures) =>
+        pictures.filter((picture) => id !== picture.id),
+      );
+      if (id === 2) setCurrentPicture(1);
+      if (id === 1) setCurrentPicture(3);
+      if (id === 3) setCurrentPicture(4);
+      if (id === 4) {
+        setIsVictory(true);
+        setUnlockedLevels({ 1: true, 2: true, 3: false });
+      }
     }
   };
 
   const handleBoxClick = () => {
     if (!selectedPicture) return;
-    if (forbiddenPictures.includes(selectedPicture)) {
-    } else {
-      removeImg(selectedPicture);
-    }
+    removePicture(selectedPicture);
   };
 
   return (
@@ -84,14 +87,14 @@ const Game1 = ({ setUnlockedLevels }) => {
         <DndProvider backend={HTML5Backend}>
           <DragDrop
             pictures={pictures}
-            removeImg={removeImg}
+            removePicture={removePicture}
             selectedPicture={selectedPicture}
             setSelectedPicture={setSelectedPicture}
             handleBoxClick={handleBoxClick}
           />
         </DndProvider>
       </div>
-      <Sound text={currentPicture} />
+      <Sound text={currentText} sound={currentSound} />
     </main>
   );
 };

@@ -6,7 +6,7 @@ import GameRulesInfo from '../GameRulesInfo';
 import VictoryPopup from '../VictoryPopup';
 import './style.css';
 
-const pictureGallery = [
+const initialPictures = [
   {
     id: 1,
     image: require('./img/lion.png'),
@@ -46,16 +46,16 @@ const pictureGallery = [
 ];
 
 const Game2 = () => {
-  const [currentPicture, setCurrentPicture] = useState(pictureGallery[0].id);
+  const [currentPicture, setCurrentPicture] = useState(initialPictures[0].id);
   const [donePictures, setDonePictures] = useState([]);
   const [isInfoVisible, setIsInfoVisible] = useState(true);
   const [isVictory, setIsVictory] = useState(false);
 
-  const currentText = pictureGallery.find(
+  const currentText = initialPictures.find(
     (picture) => currentPicture === picture.id,
   ).text;
 
-  const currentSound = pictureGallery.find(
+  const currentSound = initialPictures.find(
     (picture) => currentPicture === picture.id,
   ).sound;
 
@@ -81,7 +81,7 @@ const Game2 = () => {
 
       <div className="game2-content">
         <div className="content__images">
-          {pictureGallery.map((picture) => {
+          {initialPictures.map((picture) => {
             const isDone = donePictures.includes(picture.id);
             return (
               <img

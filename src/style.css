@@ -10,15 +10,16 @@ html {
 }
 .navigation {
   border-radius: 10px 10px 0 0;
-  padding: 22px;
+  padding: 10px 25px;
 }
 
 .navigation-game {
-  background-color: #eaeaea;
+  background-color: #33456f;
   border-radius: 10px 10px 0 0;
-  padding: 22px;
+  padding: 10px 25px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
 }
 
 main {
@@ -38,7 +39,7 @@ main {
 
 .info__button,
 .home__button {
-  background-color: #139eb1;
+  background-color: #33456f;
 }
 
 .back__button {
@@ -49,9 +50,8 @@ main {
 .info__button,
 .back__button {
   border-radius: 50%;
-  border: none;
+  border: 2px solid white;
   padding: 10px;
-  box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
 }
 
 .button1,
