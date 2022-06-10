@@ -5,13 +5,12 @@ import arrowIcon from './img/arrow.png';
 
 const ICON = {
   home: homeIcon,
-  // info: infoIcon,
   arrow: arrowIcon,
 };
-const Button = ({ image, target, className }) => {
+const Button = ({ image, target, className, onClick }) => {
   return (
-    <button className={className}>
-      <Link className="button" to={target}>
+    <button className={className} onClick={onClick}>
+      <Link className={onClick ? 'button link-disabled' : 'button'} to={target}>
         <img className="button__icon" src={ICON[image]} />
       </Link>
     </button>
