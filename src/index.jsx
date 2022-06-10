@@ -66,7 +66,10 @@ const App = () => {
             path="game1"
             element={<Game1 setUnlockedLevels={setUnlockedLevels} />}
           />
-          <Route path="game2" element={<Game2 />} />
+          <Route
+            path="game2"
+            element={<Game2 setUnlockedLevels={setUnlockedLevels} />}
+          />
           <Route path="game3" element={<Game3 />} />
           <Route path="rules-info" element={<GameRulesInfo />} />
           <Route

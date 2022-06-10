@@ -97,3 +97,7 @@ main {
 .button3:hover {
   background-color: #33456f;
 }
+/* vypíná výchozí chování toho odkazu */
+.link-disabled {
+  pointer-events: none;
+}

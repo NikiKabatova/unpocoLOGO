@@ -10,12 +10,15 @@ const rhymePictures = [
   {
     id: 1,
     image: require('./img/strawberry.png'),
-    text: 'To byla nehoda!Spadla mi _ _ _ _ _ _!', //TODO: přidat wrap? nebo br? Prostě nevím jak to udělat na 2 řádky, a také nevím jak tomu dát třídu
+    text: `To byla nehoda!
+    \n
+    Spadla mi _ _ _ _ _ _!`,
   },
   {
     id: 2,
     image: require('./img/panda.png'),
-    text: 'Ptá se Tondy Vanda, jak vypadá _ _ _ _ _ .',
+    text: `Ptá se Tondy Vanda,
+jak vypadá _ _ _ _ _ .`,
   },
   {
     id: 3,
@@ -53,12 +56,17 @@ const Game3 = () => {
   return (
     <main>
       {isInfoVisible && (
-        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={0} />
+        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={2} />
       )}
       {isVictory && <VictoryPopup />}
       <nav className="navigation-game">
         <Button image="arrow" target="/map" className="back__button" />
-        <Button image="home" target="/" className="home__button" />
+        <Button
+          onClick={() => setIsInfoVisible(true)}
+          image="home"
+          target="/"
+          className="home__button"
+        />
       </nav>
 
       <div className="game3-content">
