@@ -79,8 +79,8 @@ const Game1 = ({ setUnlockedLevels }) => {
         <Button image="arrow" target="/map" className="back__button" />
         <Button image="home" target="/" className="home__button" />
       </nav>
-      <Sound text={currentPicture} />
-      <div className="content">
+
+      <div className="game1-content">
         <DndProvider backend={HTML5Backend}>
           <DragDrop
             pictures={pictures}
@@ -91,6 +91,7 @@ const Game1 = ({ setUnlockedLevels }) => {
           />
         </DndProvider>
       </div>
+      <Sound text={currentPicture} />
     </main>
   );
 };

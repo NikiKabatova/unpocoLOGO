@@ -17,7 +17,6 @@ import './style.css';
 const Wrapper = () => (
   <div>
     <nav
-      className="navigation"
       style={{
         borderBottom: 'solid 1px',
         paddingBottom: '1rem',

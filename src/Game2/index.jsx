@@ -79,7 +79,7 @@ const Game2 = () => {
         <Button image="home" target="/" className="home__button" />
       </nav>
 
-      <div className="content">
+      <div className="game2-content">
         {pictureGallery.map((picture) => {
           const isDone = donePictures.includes(picture.id);
           return (

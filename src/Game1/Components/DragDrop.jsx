@@ -21,9 +21,6 @@ const DragDrop = ({
 
   return (
     <>
-      <div onClick={handleBoxClick} className="box" ref={drop}>
-        <img className="box__img" src={boxImg} />
-      </div>
       <div className="pictures">
         {pictures.map((picture) => {
           return (
@@ -36,6 +33,9 @@ const DragDrop = ({
             />
           );
         })}
+      </div>
+      <div onClick={handleBoxClick} className="box" ref={drop}>
+        <img className="box__img" src={boxImg} />
       </div>
     </>
   );

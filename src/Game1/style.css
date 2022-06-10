@@ -6,14 +6,7 @@
   margin-bottom: 30px;
 }
 
-.navigation {
-  background-color: #e1e1e1;
-  border-radius: 10px 10px 0 0;
-  padding: 10px;
-  display: flex;
-}
-
-.content {
+.game1-content {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -23,3 +16,9 @@
 .game1__image {
   height: 150px;
 }
+
+/* robot: 
+position: absolute;
+    left: 4%;
+    top: 81%;
+    width: 35%; */

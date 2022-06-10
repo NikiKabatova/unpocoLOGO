@@ -8,6 +8,13 @@ html {
   font-family: sans-serif;
   background-color: #c8eaed;
 }
+.navigation {
+  background-color: #eaeaea;
+  border-radius: 10px 10px 0 0;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+}
 
 main {
   max-width: 600px;
@@ -20,7 +27,6 @@ main {
 }
 
 .button__icon {
-  background-color: #139eb1;
   border: none;
   width: auto;
 }
