@@ -35,12 +35,28 @@
   left: 35%;
 }
 
-.bubble .bubble-bottom-left {
+.bubble,
+.bubble-bottom-left {
   position: relative;
 }
 .brokolik-rules {
   display: block;
   margin: 0 auto;
-  margin-top: 100px;
-  width: 50%;
+  margin-top: 33px;
+  width: 43%;
+}
+
+.bubble__button {
+  color: white;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
+  cursor: pointer;
+  font-family: 'League Spartan', sans-serif;
+  text-transform: uppercase;
+  padding: 15px;
+  background-color: #85b794;
+}
+.bubble__button:hover {
+  background-color: #578764;
 }
