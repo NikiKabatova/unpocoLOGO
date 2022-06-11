@@ -20,7 +20,7 @@ const Picture = ({ id, image, onClick, selectedPicture }) => {
       style={{
         filter:
           isDragging || id === selectedPicture
-            ? 'drop-shadow(0 0 0.75rem crimson)'
+            ? 'drop-shadow(0 0 0.75rem rgb(160, 0, 210))'
             : 'none',
       }}
     />
