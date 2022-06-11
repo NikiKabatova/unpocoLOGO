@@ -30,6 +30,10 @@
   width: 30%;
 }
 
+.highlight-level {
+  filter: drop-shadow(0 0 15px white);
+}
+
 @media (min-width: 1020px) {
   .map__image {
     max-width: 760px;

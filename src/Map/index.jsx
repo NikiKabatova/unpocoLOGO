@@ -12,10 +12,13 @@ import { Link } from 'react-router-dom';
 import './style.css';
 
 const Map = ({ unlockedLevels }) => {
-  console.log(unlockedLevels);
   const level1 = unlockedLevels[1] ? caveColor : caveGray;
   const level2 = unlockedLevels[2] ? waterfallColor : waterfallGray;
   const level3 = unlockedLevels[3] ? vulcanoColor : vulcanoGray;
+  const highlight1 = unlockedLevels[2] === false;
+  const highlight2 = unlockedLevels[2] === true && unlockedLevels[3] === false;
+  // const highlight2 = unlockedLevels[2] && !unlockedLevels[3]
+  const highlight3 = unlockedLevels[3] === true;
   return (
     <main className="test">
       <nav className="navigation">
@@ -24,13 +27,22 @@ const Map = ({ unlockedLevels }) => {
       <div className="map">
         <img className="map__image" src={map} />
         <Link to="/game1">
-          <img className="level1" src={level1} />
+          <img
+            className={highlight1 ? 'level1 highlight-level' : 'level1 '}
+            src={level1}
+          />
         </Link>
         <Link to="/game2">
-          <img className="level2" src={level2} />
+          <img
+            className={highlight2 ? 'level2 highlight-level' : 'level2 '}
+            src={level2}
+          />
         </Link>
         <Link to="/game3">
-          <img className="level3" src={level3} />
+          <img
+            className={highlight3 ? 'level3 highlight-level' : 'level3 '}
+            src={level3}
+          />
         </Link>
       </div>
     </main>
