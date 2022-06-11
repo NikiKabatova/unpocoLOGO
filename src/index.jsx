@@ -16,6 +16,7 @@ import './style.css';
 
 const Wrapper = () => (
   <div>
+    {/* TODO: smazat celou nav a nechat tam jenom Outlet */}
     <nav
       style={{
         borderBottom: 'solid 1px',

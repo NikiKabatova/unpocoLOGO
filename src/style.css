@@ -23,7 +23,7 @@ html {
 }
 
 main {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   background-color: #fbf8f8;
   border-radius: 10px;
@@ -34,7 +34,7 @@ main {
 
 .button__icon {
   border: none;
-  width: auto;
+  width: 18px;
 }
 
 .info__button,
@@ -52,6 +52,8 @@ main {
   border-radius: 50%;
   border: 2px solid white;
   padding: 10px;
+  width: 45px;
+  height: 45px;
 }
 
 .button1,

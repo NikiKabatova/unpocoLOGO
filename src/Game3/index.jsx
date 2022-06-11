@@ -66,6 +66,7 @@ const Game3 = () => {
       {isInfoVisible && (
         <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={2} />
       )}
+      {/* TODO:přidat popup pro dokončení celé hry místo VictoryPopup */}
       {isVictory && <VictoryPopup />}
       <nav className="navigation-game">
         <Button image="arrow" target="/map" className="back__button" />
@@ -94,7 +95,7 @@ const Game3 = () => {
             );
           })}
         </div>
-        <Sound text={currentText} sound={currentSound} />
+        <Sound sound={currentSound} />
       </div>
     </main>
   );

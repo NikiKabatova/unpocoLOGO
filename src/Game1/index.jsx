@@ -62,7 +62,7 @@ const Game1 = ({ setUnlockedLevels }) => {
       if (id === 3) setCurrentPicture(4);
       if (id === 4) {
         setIsVictory(true);
-        setUnlockedLevels({ 1: true, 2: true, 3: false });
+        setUnlockedLevels((unlockedLevels) => ({ ...unlockedLevels, 2: true }));
       }
     }
   };
