@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Roboto:wght@400&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #c8eaed;
 }
 .navigation {
@@ -39,7 +39,9 @@ main {
 
 .home__button,
 .info__button,
-.back__button {
+.back__button,
+.reload__button,
+.check__button {
   border-radius: 50%;
   border: 2px solid white;
   padding: 10px;
@@ -47,6 +49,12 @@ main {
   height: 45px;
   background-color: #33456f;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
+}
+
+.check__button {
+  background-color: #85b794;
+  width: 50px;
+  height: 50px;
 }
 
 .home__button--map {
@@ -98,4 +106,9 @@ main {
 /* vypíná výchozí chování toho odkazu */
 .link-disabled {
   pointer-events: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
