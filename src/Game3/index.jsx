@@ -72,9 +72,9 @@ const Game3 = () => {
         <Button image="arrow" target="/map" className="back__button" />
         <Button
           onClick={() => setIsInfoVisible(true)}
-          image="home"
+          image="info"
           target="/"
-          className="home__button"
+          className="info__button"
         />
       </nav>
 

@@ -83,9 +83,9 @@ const Game1 = ({ setUnlockedLevels }) => {
         <Button image="arrow" target="/map" className="back__button" />
         <Button
           onClick={() => setIsInfoVisible(true)}
-          image="home"
+          image="info"
           target="/"
-          className="home__button"
+          className="info__button"
         />
       </nav>
 

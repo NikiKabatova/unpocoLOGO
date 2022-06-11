@@ -22,7 +22,11 @@ const Map = ({ unlockedLevels }) => {
   return (
     <main className="test">
       <nav className="navigation">
-        <Button image="home" target="/" className="home__button" />
+        <Button
+          image="home"
+          target="/"
+          className="home__button home__button--map"
+        />
       </nav>
       <div className="map">
         <img className="map__image" src={map} />
