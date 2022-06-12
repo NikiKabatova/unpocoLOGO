@@ -3,6 +3,7 @@ import brokolik from '../img/brokolik.png';
 import { Link } from 'react-router-dom';
 import './style.css';
 import Button from '../Button';
+import Sound from '../Sound';
 
 const Rules = () => {
   return (
@@ -20,6 +21,7 @@ const Rules = () => {
           musíš splnit všechny. Tak vzhůru do boje.
         </p>
         <img className="brokolik" src={brokolik} />
+        <Sound sound={require('./rules.mp3')} />
         <button className="button1">
           <Link to="/map">Start</Link>
         </button>
