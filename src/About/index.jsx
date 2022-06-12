@@ -36,21 +36,21 @@ const About = () => {
             <p>
               S logopedií je dobré začínat už v útlém věku. Rodič je tím
               nejlepším vzorem pro své děti. Trávíte spolu každý den a děti rády
-              napodobují to co vidí a slyší. Toto má největší hybnou sílu ve
-              vývoji komunikačních a jazykových schopností dítěte
+              napodobují to, co vidí a slyší. Toto má největší hybnou sílu ve
+              vývoji komunikačních a jazykových schopností dítěte.
             </p>
             <p>
               Podle průzkumu není dobré tvrdit, že na logopedii je čas. Logoped
               může poradit rodičům dvouletého dítěte aktivity, které se
-              realizují v pohodlí domova a v 5 letech už na ní nemusí docházet,
+              realizují v pohodlí domova, a v 5 letech už na ní nemusí docházet,
               protože rodiče správně zacílili aktivity v brzkém věku dítěte.
               Nejvhodnější formou pro učení dětí předškolního věku je hra.
             </p>
             <p>
-              Tato hra je je zacílená na hlavně výslovnost jednotlivých písmen a
-              i vy budete její součástí! Na vás je zhodnotit jestli to vaše
+              Tato hra je zacílená hlavně na výslovnost jednotlivých písmen a i
+              vy budete její součástí! Na vás je zhodnotit, jestli to vaše
               ratolest řekla správně a nebo nikoliv. Nebojte se je podpořit a
-              klidně je nechat level opakovat aby si výslovnost opravdu
+              klidně je nechte level opakovat, aby si výslovnost opravdu
               procvičily.
             </p>
           </section>

@@ -17,7 +17,9 @@ const VictoryPopup = () => {
       <div className="popup">
         <img className="stars" src={stars} alt="Obrázek tří hvězd" />
         <h1 className="popup__title">Skvělá práce</h1>
-        <p>Teď už jenom zbývá aby ti rodiče potvrdili úspěšně zdolaný level!</p>
+        <p>
+          Teď už jenom zbývá, aby ti rodiče potvrdili úspěšně zdolaný level!
+        </p>
 
         <Link to="/">
           <button className="home__button">

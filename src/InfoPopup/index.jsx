@@ -10,7 +10,7 @@ const data = [
     sound: require('./audio/info_level1.mp3'),
   },
   {
-    text: `Pozorně poslouchej, zopakuj co slyšíš a potom klikni na obrázek, který se shoduje s tím co jsi řekl.`,
+    text: `Pozorně poslouchej, zopakuj co slyšíš a potom klikni na obrázek, který se shoduje s tím, co jsi řekl.`,
     sound: require('./audio/info_level2.mp3'),
   },
   {

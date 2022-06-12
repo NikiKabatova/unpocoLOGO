@@ -15,12 +15,12 @@ const Rules = () => {
       </nav>
       <div className="rules__content">
         <p>
-          Ahoj, já jsem Brokolík, tvým úkolem bude mi pomoci zachránit princeznu
-          Karotku ze spárů zlouna Čilíka. Postupně budeme procházet jednotlivá
-          stanoviště a plnit úkoly, s úkoly ti pomohou rodiče. Pokud se ti
-          podaří splnit úkol, posouváš se na další stanoviště, ve hře máš tři
-          životy, díky kterým můžeš úkol opakovat. K osvobození princezny je
-          musíš splnit všechny. Tak vzhůru do boje.
+          Ahoj já jsem Brokolík a zloun Čilík mi unesl princeznu Karotku. Tvým
+          úkolem bude mi pomoci ji získat zpět! Postupně projdeme jednotlivé
+          levely, kde budeme plnit úkoly a učit se správě vyslovovat písmenka.
+          Rodiče budou tvým pomocníkem a budou ti schvalovat, jestli jsi level
+          správně zvládl. Pro vysvobození princezny musíme úspěšně zvládnout
+          všechny levely, tak jdeme na to!
         </p>
         <img className="brokolik" src={brokolik} />
         <Sound sound={rulesSound} />
