@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import Button from '../Button';
@@ -38,7 +37,12 @@ const initialPictures = [
 ];
 
 const Game1 = ({ setUnlockedLevels }) => {
-  const [currentPicture, setCurrentPicture] = useState(initialPictures[3].id);
+  const [currentPicture, _setCurrentPicture] = useState(initialPictures[3].id);
+  const currentPictureRef = useRef(currentPicture);
+  const setCurrentPicture = (picture) => {
+    _setCurrentPicture(picture);
+    currentPictureRef.current = picture;
+  };
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
   const [isInfoVisible, setIsInfoVisible] = useLocalStorage('Game1Info', true);
@@ -53,7 +57,7 @@ const Game1 = ({ setUnlockedLevels }) => {
   ).sound;
 
   const removePicture = (id) => {
-    if (currentPicture === id) {
+    if (currentPictureRef.current === id) {
       setPictures((pictures) =>
         pictures.filter((picture) => id !== picture.id),
       );
