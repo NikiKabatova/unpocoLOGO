@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import homeIcon from './img/home.png';
 import reloadIcon from './img/refresh.png';
 import checkIcon from './img/check.png';
-// TODO: tady v tom mám někde chybu! -> import victoryGif from '.img/victoryGif.gif';
+import victoryGif from './img/victoryGif.gif';
 import stars from './img/stars.png';
 
 const FinalVictoryPopup = () => {
@@ -17,12 +17,13 @@ const FinalVictoryPopup = () => {
       <div className="final-popup">
         <img className="stars" src={stars} alt="Obrázek tří hvězd" />
         <h1 className="final-popup__title">Gatuluji!</h1>
-        <p>
-          Právě jsi úspěšně dokončil celou hru a pomohl Brokolíkovi vysvobodit
-          Karotku.
-        </p>
-        {/* TODO: Import gif do popupu! */}
-        {/* <img src={victoryGif} alt="skákající brokolík s mrkvičkou" /> */}
+        <p>Úspěšně jsi dokončil celou hru a pomohl mi vysvobodit Karotku.</p>
+
+        <img
+          className="victory__gif"
+          src={victoryGif}
+          alt="skákající brokolík s mrkvičkou"
+        />
 
         {/* TODO: Co mám dát za tlačítka do finálního popupu?  */}
         <Link to="/">

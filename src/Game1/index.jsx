@@ -58,9 +58,9 @@ const Game1 = ({ setUnlockedLevels }) => {
         pictures.filter((picture) => id !== picture.id),
       );
       if (id === 4) setCurrentPicture(3);
-      if (id === 3) setCurrentPicture(1);
-      if (id === 1) setCurrentPicture(2);
-      if (id === 2) {
+      if (id === 3) setCurrentPicture(2);
+      if (id === 2) setCurrentPicture(1);
+      if (id === 1) {
         setIsVictory(true);
         setUnlockedLevels((unlockedLevels) => ({ ...unlockedLevels, 2: true }));
       }

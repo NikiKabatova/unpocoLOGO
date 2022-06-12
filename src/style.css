@@ -9,13 +9,13 @@ html {
   background-color: #c8eaed;
 }
 .navigation {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   padding: 10px 25px;
 }
 
 .navigation-game {
   background-color: #33456f;
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   padding: 10px 25px;
   display: flex;
   justify-content: space-between;
@@ -26,10 +26,11 @@ main {
   max-width: 500px;
   margin: 0 auto;
   background-color: #fbf8f8;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0;
   position: relative;
   min-height: 600px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
 }
 
 .content {

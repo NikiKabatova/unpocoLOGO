@@ -17,7 +17,7 @@ import './style.css';
 const Wrapper = () => (
   <div>
     {/* TODO: smazat celou nav a nechat tam jenom Outlet */}
-    <nav
+    {/* <nav
       style={{
         borderBottom: 'solid 1px',
         paddingBottom: '1rem',
@@ -44,7 +44,7 @@ const Wrapper = () => (
       <Link className="game3" to="/game3">
         Game3
       </Link>
-    </nav>
+    </nav> */}
 
     <Outlet />
   </div>
