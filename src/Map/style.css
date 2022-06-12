@@ -32,7 +32,8 @@
 
 .highlight-level {
   /* filter: drop-shadow(1px 12px 2px white); */
-  filter: drop-shadow(1px 12px 2px black);
+  /* filter: drop-shadow(1px 12px 2px black); */
+  filter: drop-shadow(0 0 10px rgb(147, 4, 135));
 }
 
 @media (min-width: 1020px) {

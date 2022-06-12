@@ -8,7 +8,11 @@ const Sound = ({ text, sound }) => {
     <button
       className="audio__button"
       onClick={() => {
-        audio.play();
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
       }}
     >
       <img className="button__icon" src={speaker} />

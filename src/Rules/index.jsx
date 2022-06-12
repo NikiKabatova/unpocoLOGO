@@ -5,6 +5,8 @@ import './style.css';
 import Button from '../Button';
 import Sound from '../Sound';
 
+const rulesSound = require('./rules.mp3');
+
 const Rules = () => {
   return (
     <main className="rules">
@@ -21,7 +23,7 @@ const Rules = () => {
           musíš splnit všechny. Tak vzhůru do boje.
         </p>
         <img className="brokolik" src={brokolik} />
-        <Sound sound={require('./rules.mp3')} />
+        <Sound sound={rulesSound} />
         <button className="button1">
           <Link to="/map">Start</Link>
         </button>
