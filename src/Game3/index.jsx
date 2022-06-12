@@ -79,7 +79,7 @@ const Game3 = () => {
         />
       </nav>
 
-      <div className="game3-content">
+      <div className="content">
         <p className="rhyme__text">{currentText}</p>
         <div className="content__images">
           {initialPictures.map((picture) => {

@@ -14,9 +14,9 @@ const FinalVictoryPopup = () => {
   };
   return (
     <div className="rules-info">
-      <div className="popup">
+      <div className="final-popup">
         <img className="stars" src={stars} alt="Obrázek tří hvězd" />
-        <h1 className="popup__title">Gatuluji!</h1>
+        <h1 className="final-popup__title">Gatuluji!</h1>
         <p>
           Právě jsi úspěšně dokončil celou hru a pomohl Brokolíkovi vysvobodit
           Karotku.

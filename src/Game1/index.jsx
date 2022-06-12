@@ -38,7 +38,7 @@ const initialPictures = [
 ];
 
 const Game1 = ({ setUnlockedLevels }) => {
-  const [currentPicture, setCurrentPicture] = useState(initialPictures[1].id);
+  const [currentPicture, setCurrentPicture] = useState(initialPictures[3].id);
   const [pictures, setPictures] = useState(initialPictures);
   const [selectedPicture, setSelectedPicture] = useState();
   const [isInfoVisible, setIsInfoVisible] = useLocalStorage('Game1Info', true);
@@ -57,10 +57,10 @@ const Game1 = ({ setUnlockedLevels }) => {
       setPictures((pictures) =>
         pictures.filter((picture) => id !== picture.id),
       );
-      if (id === 2) setCurrentPicture(1);
-      if (id === 1) setCurrentPicture(3);
-      if (id === 3) setCurrentPicture(4);
-      if (id === 4) {
+      if (id === 4) setCurrentPicture(3);
+      if (id === 3) setCurrentPicture(1);
+      if (id === 1) setCurrentPicture(2);
+      if (id === 2) {
         setIsVictory(true);
         setUnlockedLevels((unlockedLevels) => ({ ...unlockedLevels, 2: true }));
       }
@@ -88,19 +88,20 @@ const Game1 = ({ setUnlockedLevels }) => {
           className="info__button"
         />
       </nav>
-
-      <div className="game1-content">
-        <DndProvider backend={HTML5Backend}>
-          <DragDrop
-            pictures={pictures}
-            removePicture={removePicture}
-            selectedPicture={selectedPicture}
-            setSelectedPicture={setSelectedPicture}
-            handleBoxClick={handleBoxClick}
-          />
-        </DndProvider>
+      <div className="content">
+        <div className="game1__container">
+          <DndProvider backend={HTML5Backend}>
+            <DragDrop
+              pictures={pictures}
+              removePicture={removePicture}
+              selectedPicture={selectedPicture}
+              setSelectedPicture={setSelectedPicture}
+              handleBoxClick={handleBoxClick}
+            />
+          </DndProvider>
+        </div>
+        <Sound text={currentText} sound={currentSound} />
       </div>
-      <Sound text={currentText} sound={currentSound} />
     </main>
   );
 };

@@ -88,7 +88,7 @@ const Game2 = ({ setUnlockedLevels }) => {
         />
       </nav>
 
-      <div className="game2-content">
+      <div className="content">
         <div className="content__images">
           {initialPictures.map((picture) => {
             const isDone = donePictures.includes(picture.id);
@@ -104,8 +104,8 @@ const Game2 = ({ setUnlockedLevels }) => {
             );
           })}
         </div>
+        <Sound text={currentText} sound={currentSound} />
       </div>
-      <Sound text={currentText} sound={currentSound} />
     </main>
   );
 };
