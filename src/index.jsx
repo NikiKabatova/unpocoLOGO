@@ -16,36 +16,6 @@ import './style.css';
 
 const Wrapper = () => (
   <div>
-    {/* TODO: smazat celou nav a nechat tam jenom Outlet */}
-    {/* <nav
-      style={{
-        borderBottom: 'solid 1px',
-        paddingBottom: '1rem',
-      }}
-    >
-      <Link className="home" to="/">
-        Home
-      </Link>
-      <Link className="about" to="/about">
-        About
-      </Link>{' '}
-      <Link className="game-rules" to="/rules">
-        Rules
-      </Link>
-      <Link className="maps" to="/map">
-        Maps
-      </Link>
-      <Link className="game1" to="/game1">
-        Game1
-      </Link>
-      <Link className="game2" to="/game2">
-        Game2
-      </Link>
-      <Link className="game3" to="/game3">
-        Game3
-      </Link>
-    </nav> */}
-
     <Outlet />
   </div>
 );

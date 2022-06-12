@@ -66,6 +66,7 @@ main {
 .back__button a,
 .reload__button a,
 .check__button a {
+  display: block;
   padding: 10px;
 }
 
