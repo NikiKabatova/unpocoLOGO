@@ -97,13 +97,15 @@ main {
   cursor: pointer;
   font-family: 'League Spartan', sans-serif;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 0;
 }
 
 .button1 a,
 .button2 a,
 .button3 a {
   color: white;
+  display: block;
+  padding: 15px 0;
 }
 
 .button1 {
@@ -135,4 +137,13 @@ main {
 a:link,
 a:visited {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .characters img {
+    height: 185px;
+  }
+  .logo-title {
+    font-size: 58px;
+  }
 }

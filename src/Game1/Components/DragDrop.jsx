@@ -2,18 +2,17 @@ import React from 'react';
 import Picture from './Picture';
 import { useDrop } from 'react-dnd';
 import boxImg from '../img/box.png';
-import Sound from '../../Sound';
 
 const DragDrop = ({
   pictures,
-  removeImg,
+  removePicture,
   selectedPicture,
   setSelectedPicture,
   handleBoxClick,
 }) => {
   const [_, drop] = useDrop(() => ({
     accept: 'image',
-    drop: (item) => removeImg(item.id),
+    drop: (item) => removePicture(item.id),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
