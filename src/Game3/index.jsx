@@ -3,6 +3,7 @@ import Button from '../Button';
 import Sound from '../Sound';
 import GameRulesInfo from '../GameRulesInfo';
 import VictoryPopup from '../VictoryPopup';
+import FinalVictoryPopup from '../FinalVictoryPopup';
 import { useState } from 'react';
 import './style.css';
 
@@ -67,7 +68,7 @@ const Game3 = () => {
         <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={2} />
       )}
       {/* TODO:přidat popup pro dokončení celé hry místo VictoryPopup */}
-      {isVictory && <VictoryPopup />}
+      {isVictory && <FinalVictoryPopup />}
       <nav className="navigation-game">
         <Button image="arrow" target="/map" className="back__button" />
         <Button
