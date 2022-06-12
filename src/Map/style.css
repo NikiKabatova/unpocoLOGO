@@ -31,7 +31,8 @@
 }
 
 .highlight-level {
-  filter: drop-shadow(0 0 15px white);
+  /* filter: drop-shadow(1px 12px 2px white); */
+  filter: drop-shadow(1px 12px 2px black);
 }
 
 @media (min-width: 1020px) {
