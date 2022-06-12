@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button';
 import Sound from '../Sound';
 import InfoPopup from '../InfoPopup';
 import VictoryPopup from '../VictoryPopup';
 import FinalVictoryPopup from '../FinalVictoryPopup';
-import { useState } from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
 import './style.css';
 
 const initialPictures = [
@@ -40,7 +40,6 @@ vyplašil pár holoubků.`,
 
 const Game3 = () => {
   const [currentPicture, setCurrentPicture] = useState(initialPictures[1].id);
-
   const currentText = initialPictures.find(
     (picture) => currentPicture === picture.id,
   ).text;
@@ -50,7 +49,7 @@ const Game3 = () => {
   ).sound;
 
   const [donePictures, setDonePictures] = useState([]);
-  const [isInfoVisible, setIsInfoVisible] = useState(true);
+  const [isInfoVisible, setIsInfoVisible] = useLocalStorage('Game3Info', true);
   const [isVictory, setIsVictory] = useState(false);
 
   const handleCLick = (id) => {

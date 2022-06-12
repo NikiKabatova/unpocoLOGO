@@ -4,7 +4,7 @@ import Button from '../Button';
 import Sound from '../Sound';
 import InfoPopup from '../InfoPopup';
 import VictoryPopup from '../VictoryPopup';
-
+import useLocalStorage from '../hooks/useLocalStorage';
 import './style.css';
 
 const initialPictures = [
@@ -49,7 +49,7 @@ const initialPictures = [
 const Game2 = ({ setUnlockedLevels }) => {
   const [currentPicture, setCurrentPicture] = useState(initialPictures[0].id);
   const [donePictures, setDonePictures] = useState([]);
-  const [isInfoVisible, setIsInfoVisible] = useState(true);
+  const [isInfoVisible, setIsInfoVisible] = useLocalStorage('Game2Info', true);
   const [isVictory, setIsVictory] = useState(false);
 
   const currentText = initialPictures.find(
