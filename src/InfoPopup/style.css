@@ -56,6 +56,7 @@
   text-transform: uppercase;
   padding: 15px;
   background-color: #85b794;
+  margin: 15px;
 }
 .bubble__button:hover {
   background-color: #578764;

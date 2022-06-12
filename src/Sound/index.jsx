@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import speaker from './speaker.png';
 import './style.css';
 
 const Sound = ({ text, sound }) => {
   const audio = new Audio(sound);
+  useEffect(() => {
+    return () => {
+      audio.pause();
+    };
+  }, []);
   return (
     <button
-      className="audio__button"
+      className={text ? 'audio__button audio__button--text' : 'audio__button'}
       onClick={() => {
         if (audio.paused) {
           audio.play();

@@ -4,6 +4,7 @@
 
 .box__img {
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .game1__container {
@@ -19,6 +20,7 @@
 .game1__image {
   height: 120px;
   position: absolute;
+  cursor: pointer;
 }
 .game1__image:nth-child(1) {
   right: 1%;
