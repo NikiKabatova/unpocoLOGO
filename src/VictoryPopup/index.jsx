@@ -21,14 +21,18 @@ const VictoryPopup = () => {
 
         <Link to="/">
           <button className="home__button">
-            <img className="button__icon" src={homeIcon} alt="Ikona domečku" />
+            <img
+              className="button__icon home__icon"
+              src={homeIcon}
+              alt="Ikona domečku"
+            />
           </button>
         </Link>
 
         <Link to="/map">
           <button className="check__button">
             <img
-              className="button__icon"
+              className="button__icon check__icon"
               src={checkIcon}
               alt="Ikona s potvrzovací fajfkou"
             />
@@ -37,7 +41,7 @@ const VictoryPopup = () => {
 
         <button className="reload__button" onClick={refreshPage}>
           <img
-            className="button__icon"
+            className="button__icon reload__icon"
             src={reloadIcon}
             alt="Ikona znovunačtení"
           />
