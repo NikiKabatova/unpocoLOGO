@@ -6,10 +6,7 @@
 
 html {
   font-family: 'Roboto', sans-serif;
-  /* background-color: #c8eaed; */
-  background: radial-gradient(circle farthest-side, #883c79ff, #401437ff);
-  background-repeat: no-repeat;
-  height: 100%;
+  background-color: #c8eaed;
 }
 .navigation {
   border-radius: 20px 20px 0 0;
@@ -56,12 +53,20 @@ main {
 .check__button {
   width: 45px;
   height: 45px;
-  padding: 10px;
+  padding: 0;
   cursor: pointer;
   border-radius: 50%;
   border: 2px solid white;
   background-color: #33456f;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
+}
+
+.home__button a,
+.info__button a,
+.back__button a,
+.reload__button a,
+.check__button a {
+  padding: 10px;
 }
 
 .home__button:hover,
