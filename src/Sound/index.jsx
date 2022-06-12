@@ -20,7 +20,7 @@ const Sound = ({ text, sound }) => {
         }
       }}
     >
-      <img className="button__icon" src={speaker} />
+      <img className="button__icon speaker__icon" src={speaker} />
       {text}
     </button>
   );
