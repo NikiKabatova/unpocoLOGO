@@ -36,13 +36,13 @@ const Map = ({ unlockedLevels }) => {
             src={level1}
           />
         </Link>
-        <Link to="/game2">
+        <Link to="/game2" className={unlockedLevels[2] ? '' : 'link-disabled'}>
           <img
             className={highlight2 ? 'level2 highlight-level' : 'level2 '}
             src={level2}
           />
         </Link>
-        <Link to="/game3">
+        <Link to="/game3" className={unlockedLevels[3] ? '' : 'link-disabled'}>
           <img
             className={highlight3 ? 'level3 highlight-level' : 'level3 '}
             src={level3}
