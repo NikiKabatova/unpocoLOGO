@@ -6,7 +6,10 @@
 
 html {
   font-family: 'Roboto', sans-serif;
-  background-color: #c8eaed;
+  /* background-color: #c8eaed; */
+  background: radial-gradient(circle farthest-side, #883c79ff, #401437ff);
+  background-repeat: no-repeat;
+  height: 100%;
 }
 .navigation {
   border-radius: 20px 20px 0 0;
