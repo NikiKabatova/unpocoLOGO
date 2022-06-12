@@ -43,8 +43,6 @@ main {
 .button__icon {
   border: none;
   width: 18px;
-
-  cursor: pointer;
 }
 
 .speaker__icon {
@@ -56,11 +54,12 @@ main {
 .back__button,
 .reload__button,
 .check__button {
-  border-radius: 50%;
-  border: 2px solid white;
-  padding: 10px;
   width: 45px;
   height: 45px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid white;
   background-color: #33456f;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 9%);
 }
