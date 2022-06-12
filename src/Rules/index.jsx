@@ -6,11 +6,11 @@ import Button from '../Button';
 
 const Rules = () => {
   return (
-    <main className="game-rules">
+    <main className="rules">
       <nav className="navigation">
         <Button image="home" target="/" className="home__button" />
       </nav>
-      <div className="game-rules__content">
+      <div className="rules__content">
         <p>
           Ahoj, já jsem Brokolík, tvým úkolem bude mi pomoci zachránit princeznu
           Karotku ze spárů zlouna Čilíka. Postupně budeme procházet jednotlivá

@@ -29,7 +29,7 @@ const Wrapper = () => (
       <Link className="about" to="/about">
         About
       </Link>{' '}
-      <Link className="rules" to="/rules">
+      <Link className="game-rules" to="/rules">
         Rules
       </Link>
       <Link className="maps" to="/map">

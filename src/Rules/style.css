@@ -1,17 +1,17 @@
-.game-rules .button1 {
+.rules .button1 {
   margin: 10px;
 }
 
-.game-rules .brokolik {
+.rules .brokolik {
   width: 40%;
 }
 
-.game-rules__button {
+.rules__button {
   margin-right: auto;
 }
-.game-rules__content {
+.rules__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
 }
