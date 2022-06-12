@@ -4,7 +4,7 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import Button from '../Button';
 import DragDrop from './Components/DragDrop';
-import GameRulesInfo from '../GameRulesInfo';
+import InfoPopup from '../InfoPopup';
 import Sound from '../Sound';
 import VictoryPopup from '../VictoryPopup';
 import './style.css';
@@ -75,7 +75,7 @@ const Game1 = ({ setUnlockedLevels }) => {
   return (
     <main>
       {isInfoVisible && (
-        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={0} />
+        <InfoPopup hide={() => setIsInfoVisible(false)} currentGame={0} />
       )}
       {isVictory && <VictoryPopup />}
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Button from '../Button';
 import Sound from '../Sound';
-import GameRulesInfo from '../GameRulesInfo';
+import InfoPopup from '../InfoPopup';
 import VictoryPopup from '../VictoryPopup';
 
 import './style.css';
@@ -74,7 +74,7 @@ const Game2 = ({ setUnlockedLevels }) => {
   return (
     <main>
       {isInfoVisible && (
-        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={1} />
+        <InfoPopup hide={() => setIsInfoVisible(false)} currentGame={1} />
       )}
       {isVictory && <VictoryPopup />}
 

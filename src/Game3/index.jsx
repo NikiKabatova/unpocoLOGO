@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import Sound from '../Sound';
-import GameRulesInfo from '../GameRulesInfo';
+import InfoPopup from '../InfoPopup';
 import VictoryPopup from '../VictoryPopup';
 import FinalVictoryPopup from '../FinalVictoryPopup';
 import { useState } from 'react';
@@ -19,7 +19,7 @@ Spadla mi _ _ _ _ _ _!`,
     id: 2,
     image: require('./img/panda.png'),
     text: `Ptá se Tondy Vanda,
-jak vypadá _ _ _ _ _ .`,
+jak vypadá _ _ _ _ .`,
     sound: require('./audio/panda.mp3'),
   },
   {
@@ -32,7 +32,7 @@ máme doma _ _ _ _.`,
   {
     id: 4,
     image: require('./img/trumpet.png'),
-    text: `Troubil Toník na _ _ _ _ _ _,
+    text: `Troubil Toník na _ _ _ _,
 vyplašil pár holoubků.`,
     sound: require('./audio/trubka.mp3'),
   },
@@ -65,7 +65,7 @@ const Game3 = () => {
   return (
     <main>
       {isInfoVisible && (
-        <GameRulesInfo hide={() => setIsInfoVisible(false)} currentGame={2} />
+        <InfoPopup hide={() => setIsInfoVisible(false)} currentGame={2} />
       )}
       {/* TODO:přidat popup pro dokončení celé hry místo VictoryPopup */}
       {isVictory && <FinalVictoryPopup />}

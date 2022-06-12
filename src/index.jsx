@@ -9,7 +9,7 @@ import Map from './Map';
 import Game1 from './Game1';
 import Game2 from './Game2';
 import Game3 from './Game3';
-import GameRulesInfo from './GameRulesInfo';
+import InfoPopup from './InfoPopup';
 import useLocalStorage from './hooks/useLocalStorage';
 
 import './style.css';
@@ -72,7 +72,7 @@ const App = () => {
             element={<Game2 setUnlockedLevels={setUnlockedLevels} />}
           />
           <Route path="game3" element={<Game3 />} />
-          <Route path="rules-info" element={<GameRulesInfo />} />
+          <Route path="rules-info" element={<InfoPopup />} />
           <Route
             path="*"
             element={
