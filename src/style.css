@@ -145,11 +145,14 @@ a:visited {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 800px) {
+  .logo-title {
+    font-size: 58px;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .characters img {
     height: 185px;
-  }
-  .logo-title {
-    font-size: 58px;
   }
 }
