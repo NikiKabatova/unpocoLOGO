@@ -18,7 +18,7 @@
 }
 
 /* tyto media jsou od min šířky 360px až po širokoúhlé monitory (tedy pro vše) */
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 300px) {
   .button1 {
     width: 180px;
   }
