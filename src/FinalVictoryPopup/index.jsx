@@ -16,7 +16,7 @@ const FinalVictoryPopup = () => {
     <div className="rules-info">
       <div className="final-popup">
         <img className="stars" src={stars} alt="Obrázek tří hvězd" />
-        <h1 className="final-popup__title">Gatuluji!</h1>
+        <h1 className="final-popup__title">Gratuluji!</h1>
         <p>Úspěšně jsi dokončil celou hru a pomohl mi vysvobodit Karotku.</p>
 
         <img
